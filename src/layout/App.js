@@ -1,17 +1,37 @@
 import React from 'react';
-import { Switch, Route, NavLink, Redirect} from 'react-router-dom';
-import User from '@/views/user';
-import Coupon from '@/views/coupon';
-import '@/main.scss';
+import { Switch, Route, Redirect, NavLink } from 'react-router-dom';
+function App() {
+  return (
+    <div className = "container">
+      <Switch>
+        <Route path = '/home' component = { Home } />
+        <Route path = '/kind' component = { Kind } />
+        <Route path = '/cart' component = { Cart } />
+        <Route path = '/user' component = { User } />
+        <Redirect to = "/home"/>
+      </Switch>
+      <footer className = "footer">
+        <ul>
+          <NavLink to = "/home">
+            <span></span>
+            <p>首页11111111</p>
+          </NavLink>
+          <NavLink to = "/kind">
+            <span></span>
+            <p>分类</p>
+          </NavLink>
+          <NavLink to = "/cart">
+            <span></span>
+            <p>购物车</p>
+          </NavLink>
+          <NavLink to = "/user">
+            <span></span>
+            <p>我的</p>
+          </NavLink>
+        </ul>
+      </footer>
+    </div>
+  );
+}
 
-const Com = () => (
-  <div className = "container">
-    <Switch>
-      <Route path = '/user' component = { User }></Route>
-      <Route path = '/coupon' component = { Coupon }></Route>
-      <Redirect to = '/coupon'></Redirect>
-    </Switch>
-  </div>
-)
-
-export default Com;
+export default App;
