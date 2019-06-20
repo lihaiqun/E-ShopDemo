@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import mainApp from '@/layout/mainApp';
+import App from '@/layout/App';
 import { Provider } from 'react-redux';
 import { HashRouter, Switch, Route} from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
-import store from './store';
+// import store from './store';
 
 ReactDOM.render(
   <Provider store = {store}>
     <HashRouter>
       <Switch>
-        <Route path = "/" component = { mainApp }></Route>
+        <Route path = "/" component = {App}></Route>
       </Switch>
     </HashRouter>
   </Provider>, 
