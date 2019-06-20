@@ -4,8 +4,6 @@ function App() {
   return (
     <div className = "container">
       <Switch>
-        <Route path = '/home' component = { Home } />
-        <Route path = '/kind' component = { Kind } />
         <Route path = '/cart' component = { Cart } />
         <Route path = '/user' component = { User } />
         <Redirect to = "/home"/>
@@ -13,7 +11,7 @@ function App() {
       <footer className = "footer">
         <ul>
           <NavLink to = "/home">
-            <span></span>
+            <span>加的水电费是的是浮点数</span>
             <p>首页11111111</p>
           </NavLink>
           <NavLink to = "/kind">
