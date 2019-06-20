@@ -1,10 +1,5 @@
 import React from 'react';
 import { Switch, Route, Redirect, NavLink } from 'react-router-dom';
-import Home from '@/views/Home';
-import Kind from '@/views/Kind';
-import Cart from '@/views/Cart';
-import User from '@/views/User';
-import '@/main.scss';
 function App() {
   return (
     <div className = "container">
