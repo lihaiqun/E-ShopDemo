@@ -6,7 +6,7 @@ class Com extends React.Component {
         <header className = "header">
           <span className = "iconfont icon-xiangzuo"></span>
           <p className = "myPrice">我的优惠券</p>
-          <p className = "redemptionCode">兑换码</p>
+          <p className = "redemptionCode">兑换码111</p>
         </header>
       </div>
     )
