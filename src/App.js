@@ -19,7 +19,7 @@ function App() {
         <ul>
           <NavLink to = "/home">
             <span></span>
-            <p>首页</p>
+            <p>首页11111111</p>
           </NavLink>
           <NavLink to = "/kind">
             <span></span>
