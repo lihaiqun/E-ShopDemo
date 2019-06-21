@@ -1,0 +1,40 @@
+@import '@/lib/reset.scss';
+* { touch-action: none }
+html, body, #root, .container {
+  @include rect(100%, 100%);
+  @include background-color(#fff);
+}
+.container {
+  @include flexbox();
+  @include flex-direction(column);
+  main {
+    @include flex(1);
+    @include rect(100%, auto);
+  }
+  @import url('//at.alicdn.com/t/font_1225232_e28vy1kaiqv.css');
+footer {
+    @include flex(0 0 0.5rem);
+    width: 100%;
+ul {
+    @include flexbox();
+    width: 100%;
+    justify-content: space-between;
+        li {
+            text-align: center;
+            span {
+              display: block;
+              width: 0.4rem;
+              font-size: 0.3rem;
+              line-height: 0.3rem;
+              &:before {
+                font-size: 0.2rem;
+              }
+            }
+            a {color: #333;}
+            a.active {
+              color: red
+            }
+        }
+    }
+  }
+}
