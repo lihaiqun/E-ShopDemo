@@ -1,0 +1,25 @@
+@import '@/lib/reset.scss';
+* { touch-action: none }
+html, body, #root, .container {
+  @include rect(100%, 100%);
+  @include background-color(#fff);
+}
+.container {
+  @include flexbox();
+  @include flex-direction(column);
+  .main {
+    @include flex(1);
+    @include rect(100%, auto);
+    @include flexbox();
+    @include flex-direction(column);
+    .header {
+      @include rect(1.44rem, .45rem)
+    }
+    .content {
+      @include flex();
+    }
+
+  }
+  @import url('//at.alicdn.com/t/font_1225232_e28vy1kaiqv.css');
+
+}
