@@ -1,5 +1,4 @@
 import React from 'react';
-import myCoupon from './myCoupon/Coupon'
 import '@/css/user.scss';
 import {Link} from 'react-router-dom';
 class Com extends React.Component {
@@ -32,10 +31,10 @@ class Com extends React.Component {
             <li><i></i><p>售后</p></li>
           </ul>
           <ul className = "couponList">
-            <Link to = "/myCoupon"><i></i><span>我的优惠券</span><b></b></Link>
-            <Link to = "/myReward"><i></i><span>推荐奖励</span><b></b></Link>
-            <Link to = "/myFootprint"><i></i><span>我的足迹</span><b></b></Link>
-            <Link to = "/myService"><i></i><span>在线客服</span><b></b></Link>
+            <Link to = "/users/myCoupon"><i></i><span>我的优惠券</span><b></b></Link>
+            <Link to = "/users/myReward"><i></i><span>推荐奖励</span><b></b></Link>
+            <Link to = "/users/myFootprint"><i></i><span>我的足迹</span><b></b></Link>
+            <Link to = "/users/myService"><i></i><span>在线客服</span><b></b></Link>
           </ul>
         </div>
       </div>
