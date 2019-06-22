@@ -1,0 +1,17 @@
+@import '@/lib/reset.scss';
+
+.container {
+  .find_check-header {
+    @include rect(100%, .3rem);
+    position: relative;
+    text-align: center;
+    font: .16rem/.3rem "";
+    .back {
+      position: absolute;
+      margin-left: .05rem;
+      @include rect(.45rem, 100%);
+      font: .14rem/.3rem "";
+    }
+    
+  }
+}
