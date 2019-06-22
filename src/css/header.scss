@@ -1,0 +1,14 @@
+header.commonheader {
+  height: .3rem;
+  display: flex;
+  line-height: .3rem;
+  color: rgba(16, 16, 16, 1);
+  font-size: .16rem;
+  span {
+    flex:1;
+  }
+  p {
+    flex:1;
+    text-align: center;
+  }
+}

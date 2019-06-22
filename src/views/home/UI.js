@@ -1,5 +1,6 @@
 import React from 'react'
 import '@/css/home.scss'
+import { Link } from 'react-router-dom'
 class Home extends React.Component {
   render () {
     return (
@@ -16,11 +17,11 @@ class Home extends React.Component {
         </section>
         <nav>
           <div>
-            <a><img src="" /></a>
+          <a><img src="" /></a>
             <p>热销榜单</p>
           </div>
           <div>
-            <a><img src="" /></a>
+          <Link to = '/homes/accessories'><img src="" /></Link>
             <p>配饰</p>
           </div>
           <div>
@@ -30,6 +31,11 @@ class Home extends React.Component {
         </nav>
         <section className="classify">
           <div className="female">
+            <a>
+              <img />
+            </a>
+          </div>
+          <div className="male">
             <a>
               <img />
             </a>
