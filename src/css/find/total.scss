@@ -1,0 +1,235 @@
+@import '@/lib/reset.scss';
+.findMain {
+  @include flexbox();
+  @include flex-direction(column);
+  overflow: auto;
+
+  .find_header {
+    @include rect(100%, .44rem);
+    @include flexbox();
+    @include align-items();
+    .find_header-back {
+      @include rect(.45rem, 100%);
+      @include flexbox();
+      @include align-items();
+      @include justify-content();
+      @include background-color(#ccc);
+    }
+    .find_header-title {
+      @include flex();
+      text-align: center;
+    }
+    .find_header-icon {
+      @include rect(.4rem, 100%);
+      background: #ccc;
+    }
+  }
+  
+  .content {
+    @include flex();
+    @include rect(100%, auto);
+    overflow: auto;
+    .find_content-wearGuide {
+      h4 {
+        overflow: hidden;
+        @include rect(100%, .5rem);
+        position: relative;
+        font: .14rem/.5rem "苹方";
+        span {
+          text-align: center;
+          display: block;
+          @include rect(100%, 100%);
+        }
+        b {
+          @include rect(.74rem, 100%);
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+      ul {
+        @include rect(100%, 2.42rem);
+        @include flexbox();
+        @include justify-content(space-around);
+        li {
+          @include rect(1.5rem, 2.42rem);
+          .learn {
+            background: #eee;
+            @include rect(1.5rem, 2rem);
+            img {
+              display: block;
+              @include rect(100%, 1.7rem);
+            }
+            a {
+              display: block;
+              @include rect(100%, .3rem);
+              font: .14rem/.3rem "";
+              text-align: center;
+            }
+          }
+          .weather {
+            @include rect(100%, .42rem);
+            @include flexbox();
+            @include align-items();
+            background: #fff; 
+          }
+        }
+      }
+      .line {
+        @include rect(2.32rem, .01rem);
+        margin: 0 auto;
+        background: #ccc;
+      }
+    }
+
+    .find_content-wearEveryday {
+      @include rect(100%, 4.2rem);
+      h4 {
+        overflow: hidden;
+        @include rect(100%, .7rem);
+        position: relative;
+        font: .14rem/.7rem "苹方";
+        span {
+          text-align: center;
+          display: block;
+          @include rect(100%, 100%);
+        }
+        b {
+          @include rect(.74rem, 100%);
+          position: absolute;
+          right: 0;
+          top: 0;
+          border-bottom: .01rem solid #ccc;
+        }
+      }
+      ul {
+        @include rect(100%, 2.3rem);
+        @include flexbox();
+        @include justify-content(space-around);
+        li {
+          @include rect(1.52rem, 2.3rem);
+          position: relative;
+          a {
+            display: block;
+            @include rect(100%, 100%);
+          }
+          em {
+            position: absolute;
+            left:1.31rem;
+            top: 2.06rem;
+            @include rect(.17rem, .17rem);
+            background: #ccc;
+          }
+        }
+      }
+      .wearHandbook {
+        @include rect(100%, 1.2rem);
+        @include flexbox();
+        @include justify-content(space-around);
+        @include align-items();
+        p {
+          @include rect(.8rem, .8rem);
+          @include border-radius(50%);
+          background: #ccc;
+          text-align: center;
+          font: .14rem/.8rem "";
+        }
+      }
+    }
+
+    .find_content-wearLesson {
+      @include rect(100%, 3.03rem);
+      h4 {
+        @include rect(100%, .3rem);
+        font: .14rem/.3rem "";
+        text-align: center;
+      }
+      .slider.am-carousel.space-carousel {
+        @include rect(100%, 1.49rem);
+        div {
+          @include rect(1.62rem, 1.49rem);
+          background: #666;
+        }
+      }
+    }
+
+    .find_content-wearStar {
+      @include rect(100%, 2.17rem);
+      h4 {
+        @include rect(100%, .3rem);
+        font: .14rem/.3rem "";
+        text-align: center;
+      }
+      .slider.am-carousel.space-carousel {
+        @include rect(100%, 1.87rem);
+        padding-top: .27rem;
+        div {
+          @include rect(1.83rem, auto);
+          background: #ddd;
+          img {
+            display: block;
+            @include rect(1.83rem, 1rem);
+          }
+          p {
+            margin: .11rem 0 .19rem;
+            @include rect(100%, .3rem);
+          }
+        }
+      }
+    }
+
+    .find_content-wearChoose {
+      @include rect(100%, auto);
+      h4 {
+        @include rect(100%, .4rem);
+        font: .14rem/.4rem "";
+        text-align: center;
+      }
+      ul {
+        @include rect(100%, auto);
+        @include flexbox();
+        @include justify-content(space-around);
+        @include flex-wrap(wrap);
+        padding-top: .18rem;
+        li {
+          @include rect(1.57rem, auto);
+          margin-bottom: .05rem;
+          .show {
+            @include rect(1.57rem, 1.73rem);
+            position: relative;
+            img {
+              display: block;
+              @include rect(100%, 100%);
+            }
+            em {
+              position: absolute;
+              left: 1.29rem;
+              top:1.43rem;
+              @include rect(.19rem, .19rem);
+            }
+          }
+        }
+        p {
+          @include rect(100%, 100%);
+          text-align: center;
+          font: .14rem/.36rem "";
+          white-space:nowrap;
+          overflow:hidden;
+          text-overflow:ellipsis;
+
+        }
+      }
+    }
+  }
+
+  .backTop {
+    position: fixed;
+    right: .13rem;
+    bottom: .94rem;
+    @include rect(.45rem, .45rem);
+    border: 1px solid #ccc;
+    @include border-radius(50%);
+    text-align: center;
+    font: .12rem/.45rem "";
+  }
+}
