@@ -1,14 +1,25 @@
 import React from 'react';
+import '@/css/find/total.scss';
+import TotalHeader from '@/components/find/Total/totalHeader';
+import ContentWearGuide from '@/components/find/Total/contentWearGuide';
+import ContentWearEveryday from '@/components/find/Total/contentWearEveryday';
+import ContentWearLesson from '@/components/find/Total/contentWearLesson';
+import ContentWearStar from '@/components/find/Total/contentWearStar';
+import ContentWearChoose from '@/components/find/Total/contentWearChoose';
 class Com extends React.Component {
   render () {
     return (
-      <div className = "coupon">
-        <header className = "header">
-          <span className = "iconfont icon-xiangzuo"></span>
-          <p className = "myPrice">我的优惠券1111111</p>
-          <p className = "redemptionCode">兑换码111</p>
-        </header>
-      </div>
+      <main className = "findMain">
+        <TotalHeader />
+        <div className = "content">
+          <ContentWearGuide />
+          <ContentWearEveryday />
+          <ContentWearLesson />
+          <ContentWearStar />
+          <ContentWearChoose />
+        </div>
+        <strong className = "backTop">顶部</strong>
+      </main>
     )
   }
 }
