@@ -1,5 +1,5 @@
 @import '@/lib/reset.scss';
-* { touch-action: none }
+// * { touch-action: none }
 html, body, #root, .container {
   @include rect(100%, 100%);
   @include background-color(#fff);
@@ -10,6 +10,7 @@ html, body, #root, .container {
   main {
     @include flex(1);
     @include rect(100%, auto);
+    overflow: auto;
   }
   @import url('//at.alicdn.com/t/font_1225232_e28vy1kaiqv.css');
 footer {

@@ -1,0 +1,56 @@
+@import '@/lib/reset.scss';
+#accessories {
+  padding: 0 .2rem;
+  nav {
+    margin-top: .04rem;
+    .top {
+      @include flexbox();
+      justify-content: space-between;
+      align-items: center;
+      color: rgba(16, 16, 16, 1);
+      text-align: center;
+      p {
+        font-size: .16rem;
+        height: .3rem;
+        line-height: .3rem
+      }
+    }
+    .navbar {
+      @include flexbox();
+      flex-wrap: wrap;
+      margin-top: .13rem;
+      justify-content: space-between;
+      align-items: center;
+      li {
+        text-align: center;
+        flex: 0 0 25%;
+        margin-top: .04rem;
+        a {
+          display: block;
+          img {
+            margin: 0 auto;
+            display: block;
+            @include rect(.52rem,.52rem);
+            border: .01rem solid rgba(187,187,187,1);
+            border-radius: 50%;
+            overflow: hidden;
+          }
+          span {
+            margin: 0 auto;
+            display: block;
+            margin-top: .01rem;
+            @include rect(.46rem,.3rem);
+            left: 215px;
+            line-height: .3rem;
+            color: rgba(16, 16, 16, 1);
+            font-size: .14rem;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  .datalist {
+    // height: 20px;
+  }
+}
