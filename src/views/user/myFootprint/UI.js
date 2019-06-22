@@ -6,7 +6,7 @@ class Com extends React.Component {
   render () {
     return (
       <div className = "my_footPrint">
-        
+        我的足迹
       </div>
     )
   }

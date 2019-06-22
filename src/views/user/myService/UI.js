@@ -6,7 +6,7 @@ class Com extends React.Component {
   render () {
     return (
       <div className = "my_service">
-        
+        在线客服
       </div>
     )
   }

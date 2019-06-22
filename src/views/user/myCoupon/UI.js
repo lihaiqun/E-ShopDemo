@@ -1,12 +1,27 @@
 import React from 'react';
 class Com extends React.Component {
   componentDidMount () {
-
+    
+  }
+  goBackUser () {
+    this.props.history.go(-1)
   }
   render () {
     return (
-      <div className = "my_coupon">
-        我的优惠券4444
+      <div className = "user_coupon">
+        <header className = "coupon_header">
+          <i onClick = { this.goBackUser.bind(this) }></i><span>我的优惠券</span><b>兑换码</b>
+        </header>
+        <div className = "user_content">
+          <ul className = "user_offer">
+            <li>全部</li>
+            <li>店铺券</li>
+            <li>平台券</li>
+          </ul>
+          <div className = "user_coupons">
+            <i></i><p>暂时没有优惠券哦</p>
+          </div>
+        </div>
       </div>
     )
   }
