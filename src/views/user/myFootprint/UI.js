@@ -24,7 +24,7 @@ class Com extends React.Component {
         </header>
         <div className = "match_single">
           <WhiteSpace />
-          <Tabs tabs={this.state.tabs} initialPage={2} animated={false} useOnPan={false}>
+          <Tabs tabs={this.state.tabs} initialPage={1} animated={false} useOnPan={false}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 'auto', backgroundColor: '#fff' }}>
               <ul className = "match_img">
                 <li><img src = "" alt = "图片马上来" /></li>
