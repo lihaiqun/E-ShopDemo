@@ -1,5 +1,4 @@
 @import '@/lib/reset.scss';
-// * { touch-action: none }
 html, body, #root, .container {
   @include rect(100%, 100%);
   @include background-color(#fff);
