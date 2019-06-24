@@ -1,0 +1,80 @@
+@import '@/lib/reset.scss';
+
+.container {
+  @include rect(100%, 100%);
+  @include flexbox();
+  @include flex-direction(column);
+  .find_findSingle-header {
+    margin-top: .12rem;
+    @include rect(100%, .3rem);
+    @include flexbox();
+    @include align-items();
+    span {
+      @include rect(.45rem, .2rem);
+      font: .14rem/.2rem "";
+      color: #666;
+    }
+    .search {
+      box-sizing: border-box;
+      text-align: center;
+      @include rect(3.1rem, .3rem);
+      font: .14rem/.3rem "";
+      border: 1px solid #bbb;
+      color: #aaa;
+      @include border-radius(.04rem);
+      margin-left: .02rem;
+    }
+  }
+  .find_findSingle-main {
+    @include flex();
+    @include rect(100%, auto);
+    overflow: auto;
+    .checkWay {
+      @include rect(100%, .3rem);
+      @include flexbox();
+      @include justify-content(space-around);
+      margin-top: .17rem;
+      color: #101010;
+      font: .14rem/.3rem "";
+    }
+    .singleProlist {
+      @include rect(100%, auto);
+      margin-top: .21rem;
+      @include flexbox();
+      @include justify-content(space-around);
+      @include flex-wrap(wrap);
+      li {
+        @include rect(1.58rem, auto);
+        margin-bottom: .14rem;
+        background: #ccc;
+        a {
+          display: block;
+          @include rect(100%, 100%);
+          img {
+            display: block;
+            @include rect(100%, 1.8rem);
+          }
+          .produce {
+            margin-top: .08rem;
+            @include rect(100%, .3rem);
+            text-align: center;
+            font: .12rem/.3rem "";
+            color: #101010;
+            white-space: nowrap;
+            overflow:hidden;
+            text-overflow: ellipsis;
+          }
+          .price {
+            @include rect(100%, .21rem);
+            font: .14rem/.21rem "";
+            color: #101010;
+            span {
+              font: 700 .21rem/1 "";
+              color :#000;
+            }
+          }
+        }
+      }
+    }
+  }
+}
