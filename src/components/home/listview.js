@@ -1,12 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { PullToRefresh } from 'antd-mobile';
+import '@/css/home/listview.scss'
 class DataListView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       dataSource: [1,2,3],
-      height: document.documentElement.clientHeight,
+      height:document.documentElement.offsetHeight,
       refreshing: true,
       isLoading: true,
     };
@@ -23,36 +24,34 @@ class DataListView extends React.Component {
     }, 1000);
     console.log(111)
   };
-
-  componentDidMount() {
-    const hei = this.state.height - ReactDOM.findDOMNode(this.ptr).offsetTop;
-    setTimeout(() => this.setState({
-      height: hei
-    }), 0);
-  }
-
   render() {
     return (
-    <div className="datalist">
-      <div>
+    <div className="homedatalist">
       <PullToRefresh
           refreshing={this.state.refreshing}
           onRefresh={this.onRefresh}
           direction= 'up'
-          style={{height:this.state.height,overflow:'auto'}}
+          style={{height:'250px',overflow:'auto'}}
           ref={el => this.ptr = el}
       >
-        <div>
-          <ul>
-          {
-            this.state.dataSource.map((v,i) => {
-              return (<li key={i}>{v}</li>)
-            })
-          }
-          </ul>
-        </div>
+        <ul>
+        {
+          this.state.dataSource.map((v,i) => {
+            return (
+            <li key={i}>
+              <a>
+                <img />
+                <div>
+                  <p className="shopname">潮流百搭连衣裙</p>
+                  <span className="desc">潮流百搭连衣裙</span>
+                  <p className="price"><span>￥</span>158.3</p>
+                </div>
+              </a>
+            </li>)
+          })
+        }
+        </ul>
       </PullToRefresh>
-      </div>
     </div>);
   }
 }

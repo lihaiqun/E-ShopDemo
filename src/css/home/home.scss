@@ -69,8 +69,23 @@
     margin-top: .4rem;
     div {
       border: .01rem solid rgba(187, 187, 187, 1);
-      @include rect(3rem,1.1rem);
+      @include rect(3.35rem,1.1rem);
       margin: 0 auto .2rem;
+    }
+  }
+  .recommend {
+    .title {
+      height: .46rem;
+      padding:.19rem 0 0 .2rem;
+      font-size: .16rem;
+      text-align: left;
+      background: rgba(244,244,244,1);
+      p {
+        line-height: .16rem;
+        left: 20px;
+        color: rgba(16, 16, 16, 1);
+        font-family: PingFangSC-regular;
+      }
     }
   }
 }
