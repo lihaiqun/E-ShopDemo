@@ -1,13 +1,11 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import { PullToRefresh } from 'antd-mobile';
 import '@/css/home/listview.scss'
 class DataListView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      dataSource: [1,2,3],
-      height:document.documentElement.offsetHeight,
+      dataSource: [1,2,3,1],
       refreshing: true,
       isLoading: true,
     };
@@ -15,7 +13,7 @@ class DataListView extends React.Component {
 
   onRefresh = () => {
     this.setState({
-      dataSource: [...this.state.dataSource,444,222,111]
+      dataSource: [...this.state.dataSource,1,1,1,1]
     })
     setTimeout(() => {
       this.setState({
@@ -26,14 +24,7 @@ class DataListView extends React.Component {
   };
   render() {
     return (
-    <div className="homedatalist">
-      <PullToRefresh
-          refreshing={this.state.refreshing}
-          onRefresh={this.onRefresh}
-          direction= 'up'
-          style={{height:'250px',overflow:'auto'}}
-          ref={el => this.ptr = el}
-      >
+      <div className="homedatalist">
         <ul>
         {
           this.state.dataSource.map((v,i) => {
@@ -41,7 +32,7 @@ class DataListView extends React.Component {
             <li key={i}>
               <a>
                 <img />
-                <div>
+                <div className="details">
                   <p className="shopname">潮流百搭连衣裙</p>
                   <span className="desc">潮流百搭连衣裙</span>
                   <p className="price"><span>￥</span>158.3</p>
@@ -51,8 +42,16 @@ class DataListView extends React.Component {
           })
         }
         </ul>
+        <PullToRefresh className="outerbox"
+        refreshing={this.state.refreshing}
+        onRefresh={this.onRefresh}
+        direction= 'up'
+        style={{height:'50px', overflow:'auto'}}
+        ref={el => this.ptr = el}
+    >
+      <span>上拉加载</span>
       </PullToRefresh>
-    </div>);
+      </div>);
   }
 }
 export default DataListView
