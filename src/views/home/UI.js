@@ -1,10 +1,22 @@
 import React from 'react'
-import '@/css/home.scss'
+import Listview from '@/components/home/listview'
+import '@/css/home/home.scss'
 import { Link } from 'react-router-dom'
 class Home extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      height: 0
+    }
+  }
+  componentDidMount () {
+    this.setState({
+      height: this.home.scrollHeight
+    })
+  }
   render () {
     return (
-      <main id="home">
+      <main id="home" ref={el => this.home = el}>
         <header>
           <button>扫描</button>
           <span>搜索</span>
@@ -17,7 +29,7 @@ class Home extends React.Component {
         </section>
         <nav>
           <div>
-          <a><img src="" /></a>
+          <Link to = '/homes/hotsale'><img src="" /></Link>
             <p>热销榜单</p>
           </div>
           <div>
@@ -40,11 +52,10 @@ class Home extends React.Component {
               <img />
             </a>
           </div>
-          <div className="male">
-            <a>
-              <img />
-            </a>
-          </div>
+        </section>
+        <section className="recommend">
+          <h3 className="title"><p>专属推荐</p></h3>
+          <Listview />
         </section>
       </main>
     )

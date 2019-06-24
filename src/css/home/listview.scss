@@ -1,0 +1,50 @@
+.homedatalist {
+  ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 .2rem;
+    li {
+      width: 1.6rem;
+      margin-top: .13rem;
+      a {
+        display: block;
+        img {
+          width: 1.6rem;
+          height: 1.6rem;
+        }
+      }
+      .details {
+        padding:.12rem 0 0 .1rem;
+        border: .01rem solid #bbb;
+        border-top: 0;
+        .shopname {
+          color: rgba(16, 16, 16, 1);
+          font-size: .14rem;
+          height: .2rem;
+          line-height: .2rem;
+        }
+        .desc {
+          height: .18rem;
+          line-height: .18rem;
+          color: rgba(153, 153, 153, 1);
+          font-size: .12rem;
+        }
+        .price {
+          margin: .07rem 0 .13rem;
+          color: rgba(255, 152, 0, 1);
+          font-size: .14rem;
+          span {
+            margin-right: .04rem;
+            font-size: .14rem;
+          }
+        }
+      }
+    }
+  }
+  .outerbox {
+    text-align: center;
+    margin-top: .2rem;
+    span {text-align: center;}
+  }
+}

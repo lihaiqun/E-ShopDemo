@@ -1,7 +1,6 @@
 import React from 'react'
-import '@/css/accessories.scss'
-import { PullToRefresh } from 'antd-mobile';
-import Listview from '@/components/accessories/listview'
+import '@/css/accessories/accessories.scss'
+import DetailList from '@/components/accessories/listview'
 import Header from '@/components/common/header'
 class Home extends React.Component {
   render () {
@@ -64,9 +63,15 @@ class Home extends React.Component {
             </li>
           </ul>
         </nav>
-        <div>
-          <Listview />
-        </div>
+        <section className="detailList">
+          <div className="operation">
+            <p>默认</p>
+            <p>销量</p>
+            <p>价格</p>
+            <p>筛选</p>
+          </div>
+          <DetailList />
+        </section>
       </main>
     )
   }
