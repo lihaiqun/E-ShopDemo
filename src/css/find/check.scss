@@ -1,6 +1,9 @@
 @import '@/lib/reset.scss';
 
 .container {
+  @include rect(100%, 100%);
+  @include flexbox();
+  @include flex-direction(column);
   .find_check-header {
     @include rect(100%, .3rem);
     position: relative;
@@ -22,5 +25,118 @@
       background: #ccc;
     }
     
+  }
+  .find_check-main {
+    @include flex();
+    @include rect(100%, auto);
+    overflow: auto;
+
+    .follow {
+      @include rect(100%, .25rem);
+      @include flexbox();
+      @include justify-content();
+      padding: 0 .5rem;
+      span {
+        font: .12rem/.25rem "";
+      }
+      p {
+        border: 1px solid #ccc;
+        padding: 0 .05rem;
+        font: .14rem/.25rem "";
+        margin-left: .5rem;
+      }
+    }
+
+    .popular {
+      margin-top: .15rem;
+      @include rect(100%, auto);
+      @include flexbox();
+      @include flex-wrap(wrap);
+      @include justify-content(space-around);
+      li {
+        @include rect(1.4rem, 1rem);
+        border: 1px solid #ccc;
+        margin-bottom: .22rem;
+        @include flexbox();
+        @include justify-content();
+        @include align-items();
+        @include flex-direction(column);
+      }
+    }
+
+    .essential {
+      overflow: hidden;
+      @include rect(100%, auto);
+      h5 {
+        margin-top: .35rem;
+        @include rect(100%, .19rem);
+        text-align: center;
+        font: .14rem/.19rem "";
+      }
+      ul {
+        @include rect(100%, 1.36rem);
+        @include flexbox();
+        @include justify-content(space-around);
+        margin-bottom: .66rem;
+        li {
+          @include rect(1.1rem, auto);
+          a {
+            display: block;
+            @include rect(100%, auto);
+            img {
+              display: block;
+              @include rect(100%, .9rem);
+            }
+            p {
+              @include rect(100%, .35rem);
+              text-align: center;
+              font: .14rem/.35rem "";
+            }
+          }
+        }
+      }
+    }
+
+    .inspiration {
+      h5 {
+        text-align: center;
+        font: .14rem/.19rem "";
+        @include rect(100%, .19rem);
+      }
+      ul {
+        @include rect(100%, auto);
+        @include flexbox();
+        @include justify-content(space-around);
+        @include flex-wrap(wrap);
+        padding-top: .18rem;
+        li {
+          @include rect(1.57rem, auto);
+          margin-bottom: .05rem;
+          .show {
+            @include rect(1.57rem, 1.73rem);
+            position: relative;
+            img {
+              display: block;
+              @include rect(100%, 100%);
+            }
+            em {
+              position: absolute;
+              left: 1.29rem;
+              top:1.43rem;
+              @include rect(.19rem, .19rem);
+            }
+          }
+        }
+        p {
+          @include rect(100%, 100%);
+          text-align: center;
+          font: .14rem/.36rem "";
+          white-space:nowrap;
+          overflow:hidden;
+          text-overflow:ellipsis;
+
+        }
+      }
+    }
   }
 }
