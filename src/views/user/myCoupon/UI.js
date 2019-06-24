@@ -10,7 +10,7 @@ class Com extends React.Component {
     return (
       <div className = "user_coupon">
         <header className = "coupon_header">
-          <i onClick = { this.goBackUser.bind(this) }></i><span>我的优惠券</span><b>兑换码</b>
+          <i onClick = { this.goBackUser.bind(this) }>图标</i><span>我的优惠券</span><b>兑换码</b>
         </header>
         <div className = "user_content">
           <ul className = "user_offer">

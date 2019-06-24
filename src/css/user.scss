@@ -35,8 +35,7 @@
           @include align-items();
           p {
             @include rect(.8rem, .28rem);
-            @include font-size(.02rem);
-            @include line-height(.28rem);
+            @include font-size(.2rem);
             @include text-align(center);
           }
         }
@@ -72,6 +71,7 @@
           p {
             @include rect(.48rem, .22rem);
             @include text-align(center);
+            @include font-size(.16rem);
           }
           i {
             @include rect(.24rem, .24rem);
@@ -96,6 +96,7 @@
           }
           span {
             @include flex();
+            @include font-size(.18rem);
           }
           b {
             @include rect(.24rem, .24rem);
@@ -120,6 +121,8 @@
       }
       span {
         @include flex();
+        @include text-align(center);
+        @include font-size(.16rem);
       }
       b {
         display: block;
@@ -160,6 +163,7 @@
     @include rect(100%, 100%);
     @include flexbox();
     @include flex-direction(column);
+    overflow: auto;
     .reward_header {
       @include flexbox();
       @include rect(100%, .45rem);
@@ -188,6 +192,189 @@
         @include font-size(.2rem);
         @include line-height(.28rem);
         @include padding(.2rem 0);
+      }
+      .reward_process-way {
+        @include border(.01rem solid #ccc);
+        @include margin(0 .25rem);
+        padding-bottom: .18rem;
+        .reward_share {
+          @include rect(100%, auto);
+          @include flexbox();
+          @include padding(.23rem 0 0 .27rem);
+          .reward_share-img {
+            @include rect(.94rem, 1.4rem);
+          }
+          .share {
+            @include flex();
+            @include flexbox();
+            @include flex-direction(column);
+            .share_img {
+              @include rect(.36rem, .36rem);
+            }
+          }
+        }
+        .friend_buy {
+          @include rect(100%, auto);
+          @include padding(.23rem 0 0 .27rem);
+          overflow: hidden;
+          .friend_buy-img {
+            @include rect(.94rem, 1.4rem);
+            float: left;
+          }
+          .buy {
+            @include flexbox();
+            @include flex-direction(column);
+            float: left;
+            .buy_img {
+              @include rect(.36rem, .36rem);
+            }
+          }
+        }
+        .get_money {
+          @include rect(100%, auto);
+          @include flexbox();
+          @include padding(.23rem 0 0 .27rem);
+          .get_money-img {
+            @include rect(.94rem, 1.4rem);
+          }
+          .money {
+            @include flex();
+            @include flexbox();
+            @include flex-direction(column);
+            .money_img {
+              @include rect(.36rem, .36rem);
+            }
+          }
+        }
+      }
+      .know_reward {
+        @include text-align(center);
+        @include margin(.05rem 0);
+        @include font-size(.12rem);
+      }
+      .reward_goods {
+        @include border(.01rem solid #ccc);
+        @include margin(0 .25rem);
+        @include flexbox();
+        @include justify-content(space-around);
+        @include flex-wrap(wrap);
+        li {
+          @include rect(1.2rem, 1.5rem);
+          @include margin(.18rem 0);
+          img {
+            @include rect(100%, 100%);
+          }
+        }
+      }
+      .more_goods {
+        @include border(.01rem solid #ccc);
+        @include font-size(.14rem);
+        @include rect(1.14rem, .3rem);
+        @include margin(.1rem auto);
+        @include text-align(center);
+        @include line-height(.3rem);
+      }
+    }
+  }
+  .my_footPrint {
+    @include rect(100%, 100%);
+    @include flexbox();
+    @include flex-direction(column);
+    overflow: auto;
+    .footerPrint-header {
+      @include flexbox();
+      @include flex-direction();
+      @include rect(100%, .45rem);
+      @include padding (.3rem .2rem);
+      margin-bottom: .2rem;
+      i {
+        display: block;
+        @include rect(.28rem, .28rem);
+      }
+      span {
+        @include flex();
+        @include text-align(center);
+        @include font-size(.2rem);
+      }
+    }
+    .match_single {
+      .match_img{
+        @include rect(100%, auto);
+        margin-top: .2rem;
+        li {
+          @include rect(2.52rem, 1.2rem);
+          @include margin(0.1rem auto);
+          img {
+            @include rect(100%, 100%);
+          }
+        }
+      }
+      .single_goods {
+        @include margin(0.2rem .25rem);
+        @include flexbox();
+        @include justify-content(space-around);
+        @include flex-wrap(wrap);
+        li {
+          @include rect(1.48rem, 1.8rem);
+          @include margin(.18rem 0);
+          img {
+            @include rect(100%, 100%);
+          }
+        }
+      }
+    }
+  }
+  .user_service {
+    @include rect(100%, 100%);
+    @include flexbox();
+    @include flex-direction(column);
+    overflow: auto;
+    .service_header {
+      @include flexbox();
+      @include rect(100%, .45rem);
+      @include padding (.3rem .2rem);
+      margin-bottom: .2rem;
+      i {
+        @include rect(.24rem, .24rem);
+      }
+      span {
+        @include flex();
+        @include text-align(center);
+        @include font-size(.2rem);
+      }
+    }
+    .common_question {
+      @include rect(auto, auto);
+      @include margin(0 .22rem);
+      .question_title {
+        @include border(.01rem solid #ccc);
+        @include background-color(#828282);
+        @include font-size(.16rem);
+        @include text-align(center);
+        @include text-color(#fff);
+        @include rect(100%, .3rem);
+        @include line-height(.3rem);
+      }
+      .question_list {
+        @include flexbox();
+        @include rect(100%, auto);
+        @include flex-wrap(wrap);
+        border-left: .01rem solid #ccc;
+        li {
+          // @include flexbox();
+          @include rect(50%, .5rem);
+          @include padding (.15rem .1rem);
+          border-bottom: .01rem solid #ccc;
+          border-right: .01rem solid #ccc;
+            i {
+              @include rect(.24rem, .24rem);
+            }
+            span {
+              @include text-align(center);
+              @include font-size(.12rem);
+              @include line-height(.17rem);
+            }
+        }
       }
     }
   }

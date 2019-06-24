@@ -1,0 +1,15 @@
+@import '@/lib/reset.scss';
+  #fashion {
+    @include flex();
+    @include rect(100%, auto);
+    @include flexbox();
+    @include flex-direction(column);
+   .header {
+    @include rect(100%, .45rem);
+   }
+   .content {
+    @include flexbox();
+   }
+  }
+  
+  @import url('//at.alicdn.com/t/font_1225232_e28vy1kaiqv.css');
