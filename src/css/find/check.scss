@@ -11,6 +11,15 @@
       margin-left: .05rem;
       @include rect(.45rem, 100%);
       font: .14rem/.3rem "";
+      left: 0;
+      top: 0;
+    }
+    .cart {
+      position: absolute;
+      @include rect(.45rem, 100%);
+      right: 0;
+      top: 0;
+      background: #ccc;
     }
     
   }

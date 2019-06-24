@@ -14,10 +14,15 @@ class Com extends React.Component {
   render () {
     return (
       <div className = "container">
-        <header className = 'find_header'>
-          <div className = "find_header-back"><i></i><span>返回</span></div>
-          <div className = "find_header-title">发现</div>
-          <div className = "find_header-icon"><i></i></div>
+        <header className = "find_check-header">
+          <div className = "back" onClick = { this.goBack }>
+            <i></i>
+            <span>返回</span>  
+          </div>  
+          <div className = "cart">
+            <i></i>
+          </div>  
+          聚会
         </header>
       </div>
     )

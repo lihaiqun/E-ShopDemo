@@ -146,6 +146,7 @@
       }
       .slider.am-carousel.space-carousel {
         @include rect(100%, 1.49rem);
+        overflow: hidden;
         div {
           @include rect(1.62rem, 1.49rem);
           background: #666;
@@ -163,6 +164,7 @@
       .slider.am-carousel.space-carousel {
         @include rect(100%, 1.87rem);
         padding-top: .27rem;
+        overflow: hidden;
         div {
           @include rect(1.83rem, auto);
           background: #ddd;

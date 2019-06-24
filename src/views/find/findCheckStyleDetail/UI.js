@@ -19,8 +19,14 @@ class Com extends React.Component {
             <i></i>
             <span>返回</span>  
           </div>  
+          <div className = "cart">
+            <i></i>
+          </div>  
           韩系
         </header>
+        <main>
+          <div></div>
+        </main>
       </div>
     )
   }
