@@ -1,5 +1,6 @@
 import React from 'react';
 import '@/css/find/check.scss';
+import { Link } from 'react-router-dom';
 class Com extends React.Component {
 
 
@@ -21,6 +22,8 @@ class Com extends React.Component {
           </div>  
           穿搭手册
         </header>
+        <button><Link to = "/finds/check/style/韩系">韩系</Link></button>
+        <button><Link to = "/finds/check/type/聚会">聚会</Link></button>
       </div>
     )
   }
