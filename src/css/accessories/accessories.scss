@@ -1,36 +1,36 @@
 @import '@/lib/reset.scss';
 #accessories {
-  padding: 0 .2rem;
   nav {
     margin-top: .04rem;
     .top {
+      padding:0 .16rem;
       @include flexbox();
       justify-content: space-between;
       align-items: center;
+      border-bottom: .01rem solid #bbb;
       color: rgba(16, 16, 16, 1);
       text-align: center;
       p {
         font-size: .16rem;
-        height: .3rem;
-        line-height: .3rem
+        height: .5rem;
+        line-height: .5rem
       }
     }
     .navbar {
       @include flexbox();
       flex-wrap: wrap;
-      margin-top: .13rem;
       justify-content: space-between;
       align-items: center;
       li {
         text-align: center;
         flex: 0 0 25%;
-        margin-top: .04rem;
+        margin-top: .23rem;
         a {
           display: block;
           img {
             margin: 0 auto;
             display: block;
-            @include rect(.52rem,.52rem);
+            @include rect(.62rem,.62rem);
             border: .01rem solid rgba(187,187,187,1);
             border-radius: 50%;
             overflow: hidden;
@@ -38,10 +38,9 @@
           span {
             margin: 0 auto;
             display: block;
-            margin-top: .01rem;
-            @include rect(.46rem,.3rem);
-            left: 215px;
-            line-height: .3rem;
+            margin-top: .11rem;
+            @include rect(auto,.2rem);
+            line-height: .2rem;
             color: rgba(16, 16, 16, 1);
             font-size: .14rem;
             text-align: center;
@@ -50,7 +49,17 @@
       }
     }
   }
-  .datalist {
-    // height: 20px;
+  .detailList {
+    margin-top: .18rem;
+    border-top:.01rem solid #bbb;
+    .operation {
+      margin-top: .26rem;
+      font-size: .14rem;
+      line-height: .2rem;
+      height: .2rem;
+      display: flex;
+      justify-content: space-around;
+      color: #101010;
+    }
   }
 }

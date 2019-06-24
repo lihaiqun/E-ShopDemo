@@ -1,0 +1,48 @@
+.accesspriesdatalist {
+  margin-top: .18rem;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 .28rem;
+    li {
+      width: 1.2rem;
+      margin-bottom: .32rem;
+      a {
+        display: block;
+        img {
+          width: 1.2rem;
+          height: 1.2rem;
+        }
+      }
+      .details {
+        font-size: .14rem;
+        .shopname {
+          color: rgba(16, 16, 16, 1);
+          height: .2rem;
+          width: 1.38rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          line-height: .2rem;
+          margin-top:.13rem ;
+        }
+        .price {
+          margin-top: .04rem;
+          color: #101010;
+          line-height: .2rem;
+          height: .2rem;
+          span {
+            margin-right: .04rem;
+            font-size: .14rem;
+          }
+        }
+      }
+    }
+  }
+  .outerbox {
+    text-align: center;
+    margin-top: .2rem;
+    span {text-align: center;}
+  }
+}

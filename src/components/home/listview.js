@@ -1,6 +1,6 @@
 import React from 'react'
 import { PullToRefresh } from 'antd-mobile';
-import '@/css/accessories/listview.scss'
+import '@/css/home/listview.scss'
 class DataListView extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +24,7 @@ class DataListView extends React.Component {
   };
   render() {
     return (
-      <div className="accesspriesdatalist">
+      <div className="homedatalist">
         <ul>
         {
           this.state.dataSource.map((v,i) => {
@@ -33,8 +33,9 @@ class DataListView extends React.Component {
               <a>
                 <img />
                 <div className="details">
-                  <p className="shopname">渔夫帽韩版女潮流百搭连衣裙</p>
-                  <p className="price"><span>￥</span>53</p>
+                  <p className="shopname">潮流百搭连衣裙</p>
+                  <span className="desc">潮流百搭连衣裙</span>
+                  <p className="price"><span>￥</span>158.3</p>
                 </div>
               </a>
             </li>)
