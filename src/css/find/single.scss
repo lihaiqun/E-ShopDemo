@@ -96,6 +96,29 @@
       border: 1px solid #bbb;
       float: right;
       background: #fff;
+      @include flexbox();
+      @include flex-direction(column);
+      .top {
+        @include flex();
+        @include rect(100%, auto);
+        h5 {
+          @include rect(100%, .3rem);
+          text-align: center;
+          margin-top: .31rem;
+          font: .14rem/.3rem "";
+          color: #101010;
+        }
+      }
+      .bottom {
+        @include rect(100%, .44rem);
+        button {
+          @include rect(50%, 100%);
+          background: #fff;
+          font-size: .16rem;
+          color: #101010;
+          border: 1px solid #bbb;
+        }
+      }
     }
     .another {
       @include rect(100%, 100%);

@@ -16,7 +16,7 @@ class Com extends React.Component {
       <div className = "container">
         {/* <SearchBar placeholder="Search" maxLength={8} /> */}
         <header className = "find_findSingle-header">
-          <span>&lt;返回</span>
+          <span onClick = { () => { this.props.history.go(-1) }}>&lt;返回</span>
           <div className = "search">搜索</div>
         </header>
         <main className = "find_findSingle-main">
