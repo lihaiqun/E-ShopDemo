@@ -1,9 +1,12 @@
 @import '@/lib/reset.scss';
 
+// 发现 选择整体
 .container {
   @include rect(100%, 100%);
   @include flexbox();
   @include flex-direction(column);
+
+  // 发现 选择头部
   .find_check-header {
     @include rect(100%, .3rem);
     position: relative;
@@ -26,11 +29,14 @@
     }
     
   }
+
+  // 发现 选择主体
   .find_check-main {
     @include flex();
     @include rect(100%, auto);
     overflow: auto;
 
+    // 发现 选择关注
     .follow {
       @include rect(100%, .25rem);
       @include flexbox();
@@ -47,6 +53,7 @@
       }
     }
 
+    // 发现 选择 流行元素
     .popular {
       margin-top: .15rem;
       @include rect(100%, auto);
@@ -64,6 +71,7 @@
       }
     }
 
+    // 发现 选择 必备单品
     .essential {
       overflow: hidden;
       @include rect(100%, auto);
@@ -97,6 +105,7 @@
       }
     }
 
+    // 发现 选择 穿搭灵感
     .inspiration {
       h5 {
         text-align: center;
