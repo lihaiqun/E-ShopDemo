@@ -37,7 +37,7 @@ class Home extends React.Component {
             <p>配饰</p>
           </div>
           <div>
-            <a><img src="" /></a>
+          <Link to = '/homes/custom'><img src="" /></Link>
             <p>私人订制</p>
           </div>
         </nav>
