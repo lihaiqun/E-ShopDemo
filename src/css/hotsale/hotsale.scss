@@ -1,6 +1,7 @@
 #hotsale {
   .topheader {
     position: fixed;
+    z-index: 999;
     background: rgb(248, 248, 248);
     top: 0;
     left: 0;right: 0;
@@ -20,5 +21,48 @@
   .data-container {
     background: rgb(244, 244, 244);
     padding: .13rem .2rem;
+  }
+  .subnav {
+    padding: 0 .2rem .17rem;
+    .title {
+      line-height: .44rem;
+      height: .44rem;
+      font-size: .16rem;
+    }
+    .subnav-child {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: .03rem;
+    }
+    .subnav-two {
+      a {
+        display: block;
+        img {
+          display: block;
+          width: 1.64rem;
+          height: .68rem;
+        }
+      }
+      
+    }
+    .subnav-four {
+      a {
+        display: block;
+        img {
+          display: block;
+          width: .8rem;
+          height: 1.33rem;
+        }
+      }
+    }
+  }
+  .collocation {
+    padding-top: .13rem;
+    background: rgb(244, 244, 244);
+    h3 {
+      font-size: .16rem;
+      padding-left: .2rem;
+    }
   }
 }

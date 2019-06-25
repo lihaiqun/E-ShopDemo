@@ -1,6 +1,8 @@
 import React from 'react'
 import Banner from '@/components/hotsale/banner'
 import '@/css/hotsale/hotsale.scss'
+import Listview from '@/components/hotsale/listview'
+import Collocation from '@/components/hotsale/collocation'
 class Home extends React.Component {
   constructor(props) {
     super(props)
@@ -21,7 +23,23 @@ class Home extends React.Component {
           <div className="placeholder"></div>
           <Banner />
           <section className="data-container">
-            todo
+            <Listview discount={true} />
+          </section>
+          <section className="subnav">
+            <h3 className="title">品类热销榜</h3>
+            <div className="subnav-two subnav-child">
+              <a><img /></a> <a><img /></a>
+            </div>
+            <div className="subnav-two subnav-child">
+              <a><img /></a> <a><img /></a>
+            </div>
+            <div className="subnav-four subnav-child">
+            <a><img /></a> <a><img /></a> <a><img /></a> <a><img /></a>
+            </div>
+          </section>
+          <section className="collocation">
+            <h3>搭配收藏榜单</h3>
+            <Collocation />
           </section>
       </main>
     )
