@@ -4,11 +4,109 @@
     @include rect(100%, auto);
     @include flexbox();
     @include flex-direction(column);
-   .header {
-    @include rect(100%, .45rem);
+    overflow: auto;
+   .fashion_header {
+    @include rect(100%, auto);
+      .search {
+        @include rect(3.25rem, .5rem);
+        border:.01rem solid #bbb;
+        border-radius: .1rem;
+        @include margin(0.2rem auto);
+        @include flexbox();
+        @include justify-content();
+        @include align-items();
+        i {
+          @include rect(.24rem, .24rem);
+        }
+        p {
+          @include font-size(.16rem);
+          @include line-height(.2rem);
+        }
+      }
    }
-   .content {
-    @include flexbox();
+   .fashion_list {
+      @include flex();
+      @include rect(100%,auto);
+     .fashion_all {
+       li {
+        @include rect(100%, auto);
+        @include flexbox();
+        @include flex-direction(column);
+        .list_title {
+          @include rect(100%, auto);
+          @include flexbox();
+          @include flex-direction();
+          @include margin(.25rem 0 0 .25rem);
+          .title_img {
+            @include rect(.44rem, .44rem);
+          }
+          .title {
+            .title_name {
+              font-weight: 700;
+              @include text-color(#101010);
+              @include font-size(.18rem);
+            }
+            .title_tip {
+              @include font-size(.12rem);          
+            }
+          }
+        }
+        .show_img {
+          @include rect(3.75rem, 2rem);
+          @include margin(.1rem 0);
+          border: .01rem solid #eee;
+        }
+        .nickname {
+          border:.01rem solid #bbb;
+          border-radius: .1rem;
+          @include rect(1.04rem, .18rem);
+          margin:.1rem 0 .1rem .16rem;
+          @include font-size(.14rem);
+          @include line-height(.18rem);
+        }
+        .share_way {
+          @include rect(100%, auto);
+          margin-left: .25rem;
+          @include flexbox();
+          @include flex-direction();
+          .like, .share_to {
+            @include rect(40%, auto);
+          }
+          i {
+            @include rect(.17rem, .17rem);
+          }
+          .weibo {
+            @include flex();
+            i {
+              @include text-align(right);
+            }
+          }
+        }
+      }
+    }
+    .fashion_attention {
+      @include flex();
+      @include rect(100%, auto);
+      @include flexbox();
+      @include flex-direction(column);
+      @include align-items();
+      @include justify-content();
+      @include text-align(center);
+      img {
+        display: block;
+        @include rect(1.5rem, 1.5rem);
+      }
+      p {
+        @include margin(.1rem 0);
+      }
+      .interest {
+        border: .01rem solid #ccc;
+        border-radius: 1rem;
+        @include font-size(.14rem);
+        @include line-height(.4rem);
+        @include rect(1.54rem, .4rem);
+      }
+    }
    }
   }
   

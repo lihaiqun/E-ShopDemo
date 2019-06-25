@@ -19,7 +19,7 @@ class Com extends React.Component {
             <li>平台券</li>
           </ul>
           <div className = "user_coupons">
-            <i></i><p>暂时没有优惠券哦</p>
+            <img src = "" alt = ""/><p>暂时没有优惠券哦</p>
           </div>
         </div>
       </div>

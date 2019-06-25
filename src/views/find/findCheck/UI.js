@@ -7,7 +7,6 @@ class Com extends React.Component {
   componentDidMount () {
 
   }
-
   goBack = () => {
     this.props.history.go(-1);
   }

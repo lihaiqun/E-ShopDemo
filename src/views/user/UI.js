@@ -7,7 +7,7 @@ class Com extends React.Component {
   }
   render () {
     return (
-      <div className = "main">
+      <div id = "user">
         <header className = "header">
           <div className = "logSetting">
             <div className = "logRes">登录/注册</div>

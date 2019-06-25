@@ -1,5 +1,5 @@
 @import '@/lib/reset.scss';
-  .main {
+  #user {
     @include flex();
     @include rect(100%, auto);
     @include flexbox();
@@ -44,6 +44,7 @@
     .content {
       @include flex();
       @include rect(100%, auto);
+      overflow: auto;
       .myOrder {
         margin:.12rem 0 .3rem .12rem;
         @include rect(100%, auto);
@@ -139,6 +140,7 @@
         @include flexbox();
         @include flex-direction();
         @include justify-content(center);
+        @include font-size(.14rem);
         li {
           @include flex();
           @include text-align(center);
@@ -152,7 +154,7 @@
         @include align-items();
         @include justify-content();
         @include text-align(center);
-        i {
+        img {
           display: block;
           @include rect(1.5rem, 1.5rem);
         }
