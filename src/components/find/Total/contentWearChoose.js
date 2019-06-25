@@ -1,3 +1,4 @@
+// 精选潮搭组件
 import React from 'react';
 export default () => (
   <div className = "find_content-wearChoose">

@@ -1,3 +1,4 @@
+// 发现首页头部
 import React from 'react';
 
 export default () => (

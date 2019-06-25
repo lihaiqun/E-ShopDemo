@@ -4,6 +4,8 @@
   @include rect(100%, 100%);
   @include flexbox();
   @include flex-direction(column);
+
+  // 发现 必备单品头部
   .find_findSingle-header {
     margin-top: .12rem;
     @include rect(100%, .3rem);
@@ -25,6 +27,8 @@
       margin-left: .02rem;
     }
   }
+
+  // 发现 必备单品主体
   .find_findSingle-main {
     @include flex();
     @include rect(100%, auto);
@@ -75,6 +79,26 @@
           }
         }
       }
+    }
+  }
+
+  // 发现 筛选出现蒙板层
+  .singleScreen {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .3);
+    .screenWay {
+      @include rect(2.25rem, 100%);
+      box-sizing: border-box;
+      border: 1px solid #bbb;
+      float: right;
+      background: #fff;
+    }
+    .another {
+      @include rect(100%, 100%);
     }
   }
 }

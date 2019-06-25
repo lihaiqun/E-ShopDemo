@@ -1,3 +1,4 @@
+// 每天为你定制新的穿搭
 import React from 'react';
 import { Link } from 'react-router-dom'
 export default () => (

@@ -1,11 +1,16 @@
 import React from 'react';
 import '@/css/find/single.scss';
 import SingleProlist from '@/components/find/Single/singleProlist';
+import SingleScreen from '@/components/find/Single/singleScreen';
 import { SearchBar } from 'antd-mobile';
 class Com extends React.Component {
   componentDidMount () {
-
   }
+
+  appearScreen = () => {
+    this.props.changeScreenFlag()
+  }
+
   render () {
     return (
       <div className = "container">
@@ -19,8 +24,9 @@ class Com extends React.Component {
             <li>默认</li>
             <li>销量</li>
             <li>价格</li>
-            <li>筛选&gt;</li>
+            <li onClick = { this.appearScreen}>筛选&gt;</li>
           </ul>
+          <SingleScreen ejectScreen = { this.props }/>
           <SingleProlist />
         </main>
       </div>

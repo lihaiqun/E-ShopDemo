@@ -1,9 +1,11 @@
 @import '@/lib/reset.scss';
+// 发现 首页主体
 .findMain {
   @include flexbox();
   @include flex-direction(column);
   overflow: auto;
-
+  
+  //发现 首页头部 
   .find_header {
     @include rect(100%, .44rem);
     @include flexbox();
@@ -25,10 +27,13 @@
     }
   }
   
+  // 发现 首页内容区
   .content {
     @include flex();
     @include rect(100%, auto);
     overflow: auto;
+
+    // 发现 首页穿搭指南
     .find_content-wearGuide {
       h4 {
         overflow: hidden;
@@ -82,6 +87,7 @@
       }
     }
 
+    // 发现 首页每天为你定制新的穿搭
     .find_content-wearEveryday {
       @include rect(100%, 4.2rem);
       h4 {
@@ -137,6 +143,7 @@
       }
     }
 
+    // 发现 首页穿搭教程
     .find_content-wearLesson {
       @include rect(100%, 3.03rem);
       h4 {
@@ -154,6 +161,7 @@
       }
     }
 
+    // 发现 首页明星搭配
     .find_content-wearStar {
       @include rect(100%, 2.17rem);
       h4 {
@@ -180,6 +188,7 @@
       }
     }
 
+    // 发现 首页精选潮搭
     .find_content-wearChoose {
       @include rect(100%, auto);
       h4 {
@@ -224,6 +233,7 @@
     }
   }
 
+  // 回到顶部
   .backTop {
     position: fixed;
     right: .13rem;
