@@ -1,0 +1,67 @@
+.hotsale-listview {
+ 
+  background: #fff;
+  
+  li { 
+    padding: .12rem .13rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: .01rem solid #bbb;
+    img {
+      width: 1rem;
+      height: 1rem;
+    }
+    .box-right {
+      height: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 1.9rem;
+      .title {
+        width: 1.9rem;
+        height: .2rem;
+        line-height: .2rem;
+        font-size: .14rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .desc {
+        height: .18rem;
+        line-height: .18rem;
+        font-size: .12rem;
+        color: #101010;
+      }
+      .discount {
+        width: .5rem;
+        height: .18rem;
+        line-height: .18rem;
+        text-align: center;
+        background: #E51C23;
+        color: #fff;
+        border-radius: .02rem;
+      }
+      .line-container {
+        display: flex;
+        justify-content: space-between;
+        div {
+          display: flex;
+          align-items: center;
+          .price {
+            color: #FF9800;
+            font-size: .18rem;
+            line-height: .3rem;
+            height: .3rem;
+          }
+          .origin-price {
+            margin-left: .1rem;
+            font-size: .14rem;
+            color: #ACACAC;
+            text-decoration-line: line-through;
+          }
+        }
+      }
+    }
+  }
+}
