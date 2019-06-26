@@ -30,6 +30,18 @@ export default () => (
           <img src={require("@/images/find/test-pic6.png")} alt = ""/>
         </a>
       </li>
+      <li>
+        <a href = "##">
+          <p>森系</p>
+          <img src={require("@/images/find/test-pic6.png")} alt = ""/>
+        </a>
+      </li>
+      <li>
+        <a href = "##">
+          <p>森系</p>
+          <img src={require("@/images/find/test-pic6.png")} alt = ""/>
+        </a>
+      </li>
     </ul>
   </div>
 )
