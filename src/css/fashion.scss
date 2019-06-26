@@ -39,6 +39,7 @@
           @include margin(.25rem 0 0 .25rem);
           .title_img {
             @include rect(.44rem, .44rem);
+            margin-right: .1rem;
           }
           .title {
             .title_name {
