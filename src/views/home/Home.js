@@ -1,5 +1,18 @@
 import { connect } from 'react-redux';
+import action from './action'
 import UI from './UI';
-const Com = connect()(UI)
-
+const mapStateToProps = (state) => {
+  return {
+    bannerList: state.home.homeBannerList
+  }
+}
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getBannerList () {
+      dispatch(action.getBannerList)
+    }
+  }
+  
+}
+const Com = connect(mapStateToProps,mapDispatchToProps)(UI)
 export default Com;
