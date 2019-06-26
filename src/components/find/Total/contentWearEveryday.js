@@ -1,21 +1,17 @@
-// 每天为你定制新的穿搭
+// 为你私人定制
 import React from 'react';
 import { Link } from 'react-router-dom'
 export default () => (
   <div className = "find_content-wearEveryday">
-    <h4><span>每天为你定制新的穿搭</span><b>重新测试</b></h4>
+    <h4><span>为你私人定制</span><b>重新测试</b></h4>
     <ul>
       <li>
-        <a href = "##">
-          <img href="##" alt = "这是图片" />
-        </a>
-        <em></em>
+        <img src={require("@/images/find/test-pic2.png")} alt = "这是图片" />
+        <a href = "##">了解详情</a>
       </li>
       <li>
-        <a href = "##">
-          <img href="##" alt = "这是图片" />
-        </a>
-        <em></em>
+        <img src={require("@/images/find/test-pic2.png")} alt = "这是图片" />
+        <a href = "##">了解详情</a>
       </li>
     </ul>
     <div className = "wearHandbook">

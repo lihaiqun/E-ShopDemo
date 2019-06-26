@@ -1,34 +1,35 @@
 // 穿搭教程
 import React from 'react';
-import { Carousel, WingBlank } from 'antd-mobile';
+
 
 export default () => (
   <div className = "find_content-wearLesson">
     <h4>穿搭教程</h4>
-    <WingBlank>
-    <Carousel className="space-carousel"
-      frameOverflow="visible"
-      cellSpacing={27}
-      dots={false}
-      infinite
-    >
-      <div>
-      <p>韩系</p>
-      <img href="##" alt = "这是图片1" />
-      </div>
-      <div>
-      <p>BL</p>
-      <img href="##" alt = "这是图片2" />
-      </div>
-      <div>
-      <p>韩系</p>
-      <img href="##" alt = "这是图片3" />
-      </div>
-      <div>
-      <p>成熟</p>
-      <img href="##" alt = "这是图片4" />
-      </div>
-    </Carousel>
-    </WingBlank>
+    <ul>
+      <li>
+        <a href = "##">
+          <p>韩系</p>
+          <img src={require("@/images/find/test-pic3.png")} alt = ""/>
+        </a>
+      </li>
+      <li>
+        <a href = "##">
+          <p>欧美风</p>
+          <img src={require("@/images/find/test-pic4.png")} alt = ""/>
+        </a>
+      </li>
+      <li>
+        <a href = "##">
+          <p>民族风</p>
+          <img src={require("@/images/find/test-pic5.png")} alt = ""/>
+        </a>
+      </li>
+      <li>
+        <a href = "##">
+          <p>森系</p>
+          <img src={require("@/images/find/test-pic6.png")} alt = ""/>
+        </a>
+      </li>
+    </ul>
   </div>
 )
