@@ -21,6 +21,7 @@
         p {
           @include font-size(.16rem);
           @include line-height(.2rem);
+          @include color(#CCCCCCFF);
         }
       }
    }
@@ -32,13 +33,14 @@
         @include rect(100%, auto);
         @include flexbox();
         @include flex-direction(column);
+        @include color(#999999FF);
         .list_title {
           @include rect(100%, auto);
           @include flexbox();
           @include flex-direction();
           @include margin(.25rem 0 0 .25rem);
           .title_img {
-            @include rect(.44rem, .44rem);
+            // @include rect(.44rem, .44rem);
             margin-right: .1rem;
           }
           .title {
@@ -53,9 +55,14 @@
           }
         }
         .show_img {
-          @include rect(3.75rem, 2rem);
+          @include rect(3.75rem, auto);
           @include margin(.1rem 0);
-          border: .01rem solid #eee;
+          @include flexbox();
+          @include flex-wrap(wrap);
+          @include justify-content();
+          img {
+            @include margin(.02rem .02rem);
+          }
         }
         .nickname {
           border:.01rem solid #bbb;
@@ -66,20 +73,23 @@
           @include line-height(.18rem);
         }
         .share_way {
-          @include rect(100%, auto);
-          margin-left: .25rem;
+          margin: 0 .25rem .01rem;
           @include flexbox();
           @include flex-direction();
+          img {
+            margin-right: .05rem;
+          }
           .like, .share_to {
-            @include rect(40%, auto);
+            @include rect(16%, auto);
           }
           i {
             @include rect(.17rem, .17rem);
           }
           .weibo {
             @include flex();
-            i {
-              @include text-align(right);
+            @include text-align(right);
+            i{
+              @include font-size(.12rem);
             }
           }
         }
@@ -109,6 +119,12 @@
       }
     }
    }
+   .am-tabs-default-bar-underline {
+     border:.01rem #FE4A65FF solid;
+   }
+   .am-tabs-default-bar-tab-active {
+      @include color(#FE4A65FF);
+    }
   }
   
   @import url('//at.alicdn.com/t/font_1225232_e28vy1kaiqv.css');

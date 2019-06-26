@@ -7,29 +7,36 @@
     .header {
       @include rect(100%, auto);
       border-bottom: .01rem solid #bbb;
+      @include background-color(#FC4D64FF);
       .logSetting {
         @include rect(100%, auto);
         @include flexbox();
         @include flex-direction();
-        @include background-color(#FC4D64FF);
         @include color(#fff);
         .logRes {
           @include font-size(.32rem);
           @include rect(1.4rem, .45rem);
           margin: .6rem .2rem .3rem .2rem;
+          img {
+            @include rect(.5rem, .5rem);
+            margin-right: .2rem;
+          }
+          span {
+            @include font-size(.16rem);
+          }
         }
         .setting {
           @include font-size(.24rem);
           @include flex();
-          margin: .6rem .3rem .3rem .7rem;
+          margin: .2rem 0 0 1.4rem;
         }
       }
       .likeAttention {
         @include rect(100%, auto);
         @include flexbox();
-        margin-bottom: .23rem;
-        @include background-color(#FC4D64FF);
+        padding-bottom: .23rem;
         @include color(#fff);
+        border-bottom: .01rem solid #FC4D64FF;
         li {
           @include flex();
           @include rect(auto, 100%);
@@ -49,18 +56,22 @@
       @include flex();
       @include rect(100%, auto);
       overflow: auto;
+      @include color(#333333FF);
       .myOrder {
-        margin:.12rem 0 .3rem .12rem;
-        @include rect(100%, auto);
+        margin:.12rem .3rem;
+        // @include rect(100%, auto);
         @include overflow(hidden);
-        i {
-          @include rect(.24rem, .24rem);
-          float: left;
-        }
         p {
           @include rect(.8rem, .28rem);
           @include font-size(.2rem);
           float: left;
+        }
+        .allOrder {
+          float: right;
+          span {
+            @include font-size(.14rem);
+            margin-right:.1rem;
+          }
         }
       }
       .pay {
@@ -74,7 +85,7 @@
           @include justify-content();
           @include align-items();
           p {
-            @include rect(.48rem, .22rem);
+            @include rect(auto, .22rem);
             @include text-align(center);
             @include font-size(.16rem);
           }
@@ -94,10 +105,11 @@
           @include flex-direction();
           @include justify-content();
           @include align-items();
-          @include text-color(#101010);
+          @include text-color(#333333FF);
           padding: .02rem .05rem;
           i {
             @include rect(.24rem, .24rem);
+            @include margin(0 .1rem 0 .3rem);
           }
           span {
             @include flex();
@@ -105,6 +117,7 @@
           }
           b {
             @include rect(.24rem, .24rem);
+            margin-right: .3rem;
           }
         }
       }
