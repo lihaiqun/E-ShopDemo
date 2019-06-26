@@ -16,7 +16,7 @@ class Com extends React.Component {
           <ContentWearEveryday />
           <ContentWearLesson />
           <ContentWearStar />
-          <ContentWearChoose />
+          {/* <ContentWearChoose /> */}
         </div>
         <strong className = "backTop">顶部</strong>
       </main>
