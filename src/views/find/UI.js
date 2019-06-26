@@ -18,7 +18,9 @@ class Com extends React.Component {
           <ContentWearStar />
           {/* <ContentWearChoose /> */}
         </div>
-        <strong className = "backTop">顶部</strong>
+        <i className = "backTop" style = {{
+      background: `url(${ require('@/images/find/backtop.png') }) no-repeat center`
+    }}></i>
       </main>
     )
   }
