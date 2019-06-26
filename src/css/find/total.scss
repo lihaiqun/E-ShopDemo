@@ -7,23 +7,22 @@
   
   //发现 首页头部 
   .find_header {
-    @include rect(100%, .44rem);
+    @include rect(100%, .5rem);
     @include flexbox();
     @include align-items();
-    .find_header-back {
-      @include rect(.45rem, 100%);
+    font: .17rem/.5rem "";
+    .find_header-back, .find_header-icon {
+      @include rect(.34rem, 100%);
       @include flexbox();
       @include align-items();
       @include justify-content();
-      @include background-color(#ccc);
+      i {
+        @include rect(.12rem, .17rem);
+      }
     }
     .find_header-title {
       @include flex();
       text-align: center;
-    }
-    .find_header-icon {
-      @include rect(.4rem, 100%);
-      background: #ccc;
     }
   }
   
@@ -31,158 +30,220 @@
   .content {
     @include flex();
     @include rect(100%, auto);
+    border-top: 1px solid #ccc;
     overflow: auto;
+    background: #f8f8f8;
 
     // 发现 首页穿搭指南
     .find_content-wearGuide {
       h4 {
         overflow: hidden;
-        @include rect(100%, .5rem);
+        @include rect(100%, .48rem);
         position: relative;
-        font: .14rem/.5rem "苹方";
+        font: .16rem/.5rem "";
+        margin-top: .03rem;
         span {
           text-align: center;
           display: block;
           @include rect(100%, 100%);
+          font: .16rem/3 "";
+          color: #333;
         }
         b {
-          @include rect(.74rem, 100%);
+          @include rect(.5rem, 100%);
           position: absolute;
           right: 0;
           top: 0;
+          @include flexbox();
+          @include align-items();
+          font: .11rem/.5rem "";
+          i {
+            @include rect(.12rem, .16rem);
+            margin-right: .07rem;
+          }
         }
       }
       ul {
-        @include rect(100%, 2.42rem);
+        @include rect(100%, 1.94rem);
         @include flexbox();
         @include justify-content(space-around);
         li {
-          @include rect(1.5rem, 2.42rem);
+          @include rect(1.39rem, 1.94rem);
           .learn {
-            background: #eee;
-            @include rect(1.5rem, 2rem);
+            @include rect(1.39rem, auto);
             img {
               display: block;
-              @include rect(100%, 1.7rem);
+              @include rect(100%, 1.31rem);
             }
             a {
               display: block;
-              @include rect(100%, .3rem);
-              font: .14rem/.3rem "";
+              @include rect(.85rem, .22rem);
+              border-radius: .11rem;
+              background: #f33;
+              font: .11rem/.22rem "";
               text-align: center;
+              color:#fff;
+              margin: .18rem auto 0;
             }
-          }
-          .weather {
-            @include rect(100%, .42rem);
-            @include flexbox();
-            @include align-items();
-            background: #fff; 
           }
         }
       }
+      .weather {
+        @include rect(100%, .29rem);
+        @include flexbox();
+        @include align-items();
+        @include justify-content();
+        color: #666;
+        font: .11rem/.29rem "";
+        i {
+          @include rect(.11rem, .11rem);
+          margin: 0 .18rem 0 .08rem;
+        }
+      }
       .line {
-        @include rect(2.32rem, .01rem);
+        @include rect(3.01rem, .01rem);
         margin: 0 auto;
         background: #ccc;
       }
     }
 
-    // 发现 首页每天为你定制新的穿搭
+    // 发现 为你私人定制
     .find_content-wearEveryday {
-      @include rect(100%, 4.2rem);
+      @include rect(100%, 3.38rem);
       h4 {
         overflow: hidden;
-        @include rect(100%, .7rem);
+        @include rect(100%, .58rem);
         position: relative;
-        font: .14rem/.7rem "苹方";
         span {
+          font: .16rem/.58rem "";
           text-align: center;
           display: block;
           @include rect(100%, 100%);
         }
         b {
-          @include rect(.74rem, 100%);
           position: absolute;
-          right: 0;
-          top: 0;
-          border-bottom: .01rem solid #ccc;
+          right: .08rem;
+          bottom: 0;
+          color: #D97D2B;
+          font-size: .13rem;
+          font-weight: 400;
         }
       }
       ul {
-        @include rect(100%, 2.3rem);
+        padding-top: .13rem;
+        @include rect(100%, 2rem);
         @include flexbox();
         @include justify-content(space-around);
         li {
-          @include rect(1.52rem, 2.3rem);
-          position: relative;
+          @include rect(1.39rem, auto);
+          img {
+            display: block;
+            @include rect(100%, 1.31rem);
+          }
           a {
             display: block;
-            @include rect(100%, 100%);
-          }
-          em {
-            position: absolute;
-            left:1.31rem;
-            top: 2.06rem;
-            @include rect(.17rem, .17rem);
-            background: #ccc;
+            @include rect(.85rem, .22rem);
+            border-radius: .11rem;
+            background: #f33;
+            font: .11rem/.22rem "";
+            text-align: center;
+            color:#fff;
+            margin: .18rem auto 0;
           }
         }
       }
       .wearHandbook {
-        @include rect(100%, 1.2rem);
+        @include rect(100%, .72rem);
         @include flexbox();
         @include justify-content(space-around);
         @include align-items();
         p {
-          @include rect(.8rem, .8rem);
+          @include rect(.72rem, .72rem);
           @include border-radius(50%);
           background: #ccc;
           text-align: center;
-          font: .14rem/.8rem "";
+          font: .17rem/.72rem "";
+        }
+        :nth-child(1) {
+          background: #fc0;
+        }
+        :nth-child(2) {
+          background: #00c0ff;
         }
       }
     }
 
     // 发现 首页穿搭教程
     .find_content-wearLesson {
-      @include rect(100%, 3.03rem);
+      @include rect(100%, auto);
       h4 {
-        @include rect(100%, .3rem);
-        font: .14rem/.3rem "";
+        @include rect(100%, .42rem);
+        font: .16rem/.42rem "";
         text-align: center;
       }
-      .slider.am-carousel.space-carousel {
-        @include rect(100%, 1.49rem);
+      ul {
+        @include rect(100%, auto);
+        padding-top: .1rem;
+        margin-bottom: .1rem;
+        @include flexbox();
+        @include justify-content(space-around);
         overflow: hidden;
-        div {
-          @include rect(1.62rem, 1.49rem);
-          background: #666;
+        li {
+          @include rect(.75rem, auto);
+          a {
+            display: block;
+            @include rect(100%, 100%);
+            p {
+              text-align: center;
+              font: .14rem/.20rem "";
+              color: #333;
+            }
+            img {
+              display: block;
+              @include rect(.75rem, 1.15rem);
+            }
+          }
         }
       }
     }
 
     // 发现 首页明星搭配
     .find_content-wearStar {
-      @include rect(100%, 2.17rem);
+      @include rect(100%, auto);
       h4 {
-        @include rect(100%, .3rem);
-        font: .14rem/.3rem "";
+        @include rect(100%, .4rem);
+        font: .16rem/.3rem "";
         text-align: center;
       }
-      .slider.am-carousel.space-carousel {
-        @include rect(100%, 1.87rem);
-        padding-top: .27rem;
+      ul {
+        @include rect(100%, auto);
+        padding-top: .1rem;
+        margin-bottom: .1rem;
+        @include flexbox();
+        @include justify-content(space-around);
         overflow: hidden;
-        div {
-          @include rect(1.83rem, auto);
-          background: #ddd;
-          img {
+        li {
+          @include rect(.75rem, auto);
+          a {
             display: block;
-            @include rect(1.83rem, 1rem);
-          }
-          p {
-            margin: .11rem 0 .19rem;
-            @include rect(100%, .3rem);
+            position: relative;
+            @include rect(100%, 100%);
+            img {
+              display: block;
+              @include rect(.75rem, 1.15rem);
+            }
+            p {
+              position: absolute;
+              bottom: 0;
+              @include rect(100%, .4rem);
+              background: rgba(0,0,0,.5);
+              text-align: center;
+              font: .1rem/2 "";
+              color: #fcfafa;
+              span {
+                display: block;
+              }
+            }
           }
         }
       }

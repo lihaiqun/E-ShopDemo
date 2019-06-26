@@ -11,6 +11,8 @@
         @include rect(100%, auto);
         @include flexbox();
         @include flex-direction();
+        @include background-color(#FC4D64FF);
+        @include color(#fff);
         .logRes {
           @include font-size(.32rem);
           @include rect(1.4rem, .45rem);
@@ -26,6 +28,8 @@
         @include rect(100%, auto);
         @include flexbox();
         margin-bottom: .23rem;
+        @include background-color(#FC4D64FF);
+        @include color(#fff);
         li {
           @include flex();
           @include rect(auto, 100%);
@@ -84,7 +88,7 @@
         @include flexbox();
         @include flex-direction(column);
         a {
-          @include flex();
+          // @include flex();
           @include rect(auto, .7rem);
           @include flexbox();
           @include flex-direction();
