@@ -24,7 +24,7 @@ class Com extends React.Component {
             <li>默认</li>
             <li>销量</li>
             <li>价格</li>
-            <li onClick = { this.appearScreen}>筛选&gt;</li>
+            <li onClick = { this.appearScreen }>筛选&gt;</li>
           </ul>
           <SingleScreen ejectScreen = { this.props }/>
           <SingleProlist />

@@ -1,6 +1,12 @@
 import React from 'react';
+import detail from '@/views/detail/index';
+import { Route } from 'react-router-dom';
 
-const Detail = () => (
-  <div className="container">详情页1111</div>
-)
-export default Detail;
+export default class Com extends React.Component {
+  
+  render () {
+    return (
+      <Route path = "/detail/:id" component = { detail }/>
+    )
+  }
+}
