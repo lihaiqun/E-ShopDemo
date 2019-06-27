@@ -10,7 +10,9 @@ class Com extends React.Component {
       <div id = "user">
         <header className = "header">
           <div className = "logSetting">
-            <div className = "logRes">登录/注册</div>
+            <div className = "logRes">
+              <img src = '' alt = "" />
+            </div>
             <div className = "setting">设置</div>
           </div>
           <ul className = "likeAttention">
