@@ -1,0 +1,164 @@
+@import '@/lib/reset.scss';
+
+.container {
+  @include rect(100%, 100%);
+  @include flexbox();
+  @include flex-direction(column);
+  .detail_header {
+    @include rect(100%, .44rem);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    // background: #fff;
+    @include flexbox();
+    @include align-items();
+    .detail_header-back, .detail_header-share, .detail_header-more {
+      @include rect(.23rem, .23rem);
+      @include flexbox();
+      @include justify-content();
+      @include align-items();
+      border-radius: 50%;
+      background: rgba(0, 0, 0, .5);
+      margin-left: .08rem;
+      i {
+        @include rect(.1rem, .19rem);
+      }
+    }
+    .detail_header-share {
+      i {
+        @include rect(.18rem, .18rem);
+      }
+    }
+    .detail_header-more {
+      margin: 0 .17rem 0 .06rem;
+      i {
+        @include rect(.17rem, .04rem);
+      }
+    }
+    .detail_header-title {
+      @include flex();
+      @include flexbox();
+      margin-left: 10%;
+      // opacity: 0;
+      li {
+        // display: none;
+        @include rect(30%, 100%);
+        a {
+          display: block;
+          @include rect(100%, 100%);
+          font: .16rem/.5rem "";
+          text-align: center;
+          color: #101010;
+          &.active {
+            border-bottom: 2px solid #ccc;
+          }
+        }
+
+      }
+    }
+  }
+
+  .detail_main {
+    @include flex();
+    @include rect(100%, auto);
+    background: #f8f8f8;
+    .detail_main-banner {
+      .banner {
+        @include rect(100%, 3.49rem);
+        background: #eee;
+      } 
+    }
+    .detail_main-introduce {
+      @include rect(100%, 1.09rem);
+      padding-top: .22rem;
+      background: #fff;
+      .price {
+        @include rect(100%, .18rem);
+        font-size: .14rem;
+        color: #c00;
+        padding-left: .08rem;
+        span {
+          font-size: .2rem;
+        }
+      }
+      .title {
+        font-size: .15rem;
+        font-weight: 700;
+        color: #333;
+        padding-left: .08rem;
+        margin-top: .11rem; 
+      }
+      .smallTitle {
+        font-size: .13rem;
+        font-weight: 700;
+        color: #333;
+        padding-left: .08rem;
+        margin-top: .08rem; 
+      }
+    }
+  }
+
+  .detail_footer {
+    @include rect(100%, .5rem);
+    @include flexbox();
+    .detail_footer-customer, .detail_footer-collection, .detail_footer-cart {
+      @include rect(13%, 100%);
+      @include flexbox();
+      @include flex-direction(column);
+      @include justify-content();
+      @include align-items();
+      i {
+        @include rect(.12rem, .17rem);
+      }
+    }
+    .detail_footer-button {
+      @include flex();
+      @include flexbox();
+      @include justify-content();
+      @include align-items();
+      font-size: .14rem;
+      color: #fff;
+      .addCart {
+        @include rect(1.07rem, .36rem);
+        border-radius: .18rem 0 0 .18rem;
+        border: none;
+        background: #ff9800;
+      }
+      .buyNow {
+        @include rect(1.07rem, .36rem);
+        border-radius: 0 .18rem .18rem 0;
+        border: none;
+        background: #e51c21;
+      }
+    }
+  }
+
+  .detail_more {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 200;
+    .detail_more-info {
+      position: absolute;
+      right:.08rem;
+      top: .47rem;
+      @include rect(1.16rem, 1.16rem);
+      background: #fff;
+      @include border-radius(.05rem);
+      .triangle {
+        position: absolute;
+        right: .1rem;
+        top: -.11rem;
+        @include rect(0, 0);
+        border-bottom: .11rem solid #fff;
+        border-left: .1rem solid rgba(0,0,0,0);
+        border-right: .1rem solid rgba(0,0,0,0);
+      }
+    }
+    .detail_more-other {
+      @include rect(100%, 100%);
+    }
+  }
+}
