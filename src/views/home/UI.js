@@ -10,11 +10,10 @@ class Home extends React.Component {
     }
   }
   componentDidMount () {
-    this.setState({
-      height: this.home.scrollHeight
-    })
+    this.props.getBannerList()
   }
   render () {
+    // console.log(this.props)
     return (
       <main id="home" ref={el => this.home = el}>
         <header>

@@ -1,5 +1,5 @@
 const initData = {
-  homeBannerList: [1,2,3]
+  homeBannerList: []
 }
 const reducer = (state = initData, action) => {
   const { type, data } = action
