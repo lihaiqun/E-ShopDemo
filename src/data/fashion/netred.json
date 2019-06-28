@@ -1,0 +1,16 @@
+[
+  {
+    "title_img": "../../images/fashion/avater1.png",
+    "title_name": "萌喵酱",
+    "title_tip": "网络红人 170cm/50kg",
+    "show_img": ["../../images/fashion/share1-1.png", "../../images/fashion/share1-2.png", "../../images/fashion/share1-3.png", "../../images/fashion/share1-4.png", "../../images/fashion/share1-5.png", "../../images/fashion/share1-7.png", "../../images/fashion/share1-7.png", "../../images/fashion/share1-8.png", "../../images/fashion/share1-4.png"],
+    "nickname": "#假两件卫衣裙"
+  },
+  {
+    "title_img": "../../images/fashion/avater2.png",
+    "title_name": "塔塔木",
+    "title_tip": "网络红人 160cm/48kg",
+    "show_img": ["../../images/fashion/share2-1.png", "../../images/fashion/share2-2.png", "../../images/fashion/share2-3.png"],
+    "nickname": "#游乐园什么木马"
+  }
+]
