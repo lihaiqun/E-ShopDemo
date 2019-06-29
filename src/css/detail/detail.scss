@@ -96,6 +96,25 @@
         margin-top: .08rem; 
       }
     }
+    .detail_main-adress {
+      @include rect(100%, .44rem);
+      @include flexbox();
+      @include align-items();
+      background: #fff;
+      font-size: .15rem;
+      .left {
+        color: #999;
+        margin: 0 .17rem 0 .08rem;
+      }
+      .center {
+        @include flex();
+        color: #333;
+      }
+      .right {
+        @include rect(.1rem, .18rem);
+        margin-right: .14rem;
+      }
+    }
   }
 
   .detail_footer {
@@ -159,6 +178,84 @@
     }
     .detail_more-other {
       @include rect(100%, 100%);
+    }
+  }
+  
+  .detail_main-moreAdress {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 200;
+    background: rgba(0,0,0,.5);
+    .other {
+      @include rect(100%, 100%);
+    }
+    .adress {
+      @include rect(100%, 3.12rem);
+      background: #fff;
+      position: absolute;
+      bottom:0;
+      border-radius: .08rem .08rem 0 0;
+      @include flexbox();
+      @include flex-direction(column);
+      overflow: hidden;
+      .top {
+        @include rect(100%, .38rem);
+        text-align: center;
+        font: .16rem/.38rem "";
+        color: #333;
+        // border-bottom: 1px solid #eee;
+        position: relative;
+        .cancel {
+          position: absolute;
+          right: .1rem;
+          top: .13rem;
+          @include rect(.12rem, .12rem);
+        }
+      }
+
+      .adressInfo {
+        @include flex();
+        @include rect(100%, auto);
+        overflow: auto;
+        li {
+          @include rect(100%, .55rem);
+          border-bottom: 1px solid #eee;
+          @include flexbox();
+          @include align-items();
+          .icon {
+            @include rect(.16rem, .16rem);
+            margin: 0 .15rem 0 .08rem;
+          }
+          .tel {
+            @include align-self(start);
+            margin: .14rem .18rem 0 0;
+            font-size: .12rem;
+            color: #333;
+          }
+          .information {
+            @include flex();
+            p {
+              font-size: .11rem;
+              i {
+                display: inline-block;
+                @include rect(.1rem, .12rem);
+                margin-right: .03rem;
+              }
+            }
+          }
+        }
+      }
+
+      .addAdress {
+        @include rect(100%, .44rem);
+        text-align: center;
+        font: .15rem/.44rem "";
+        color: #333;
+        background: #f8f8f8;
+      }
     }
   }
 }
