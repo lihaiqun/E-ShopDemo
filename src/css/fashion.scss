@@ -80,7 +80,7 @@
             margin-right: .05rem;
           }
           .like, .share_to {
-            @include rect(16%, auto);
+            @include rect(20%, auto);
           }
           i {
             @include rect(.17rem, .17rem);
