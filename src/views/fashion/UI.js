@@ -14,8 +14,10 @@ class Com extends React.Component {
     })
   }
   componentDidMount () {
+    this.props.getFashionNetRed()
   }
   render () {
+    console.log(this.props.fashionNetRed)
     return (
       <div id = "fashion">
         <header className = "fashion_header">
@@ -30,6 +32,32 @@ class Com extends React.Component {
               <div className = "fashion_attention">
                 <img src = "" alt = "" /><p>这里空空一片</p><p className = "interest">查看感兴趣的ICON>></p>
               </div>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 'auto', backgroundColor: '#fff' }}>
+                <ul className = "fashion_all">
+                {this.props.fashionNetRed.map(item => {
+                  return (<li key = { item.id }>
+                  <div className = "list_title">
+                  <img className = "title_img" src = { item.title_img } alt = "" />
+                    <div className = "title">
+                      <p className = "title_name"> { item.title_name } </p>
+                      <p className = "title_tip"> { item.title_tip } </p>
+                    </div>
+                  </div>
+                  <div className = "show_img">
+                    <img src = { item.show_img } alt = "图片马上来" />
+                  </div>
+                  <div className = "nickname"> { item.nickname } </div>
+                  <div className = "share_way">
+                    <div className = "like"><i><img src = {require("@/images/fashion/sharelink.png")} alt = "图片马上来" /></i><span>喜欢</span></div>
+                    <div className = "share_to"><i><img src = {require("@/images/fashion/sharelink.png")} alt = "图片马上来" /></i><span>分享</span></div>
+                    <div className = "weibo"><i>3个小时前</i></div>
+                  </div>
+                </li>)
+                }
+                
+                )}
+              </ul>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 'auto', backgroundColor: '#fff' }}>
               <ul className = "fashion_all">
@@ -59,10 +87,6 @@ class Com extends React.Component {
                     <div className = "weibo"><i>3个小时前</i></div>
                   </div>
                 </li>
-              </ul>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 'auto', backgroundColor: '#fff' }}>
-              <ul className = "fashion_all">
               <li>
                   <div className = "list_title">
                   <img className = "title_img" src = {require("@/images/fashion/avater2.png")} alt = "" />
