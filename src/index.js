@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from '@/App';
-import './mock/fashion/index';
+// import './mock/fashion/index';
 import { Provider } from 'react-redux';
 import { HashRouter, Switch, Route} from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';

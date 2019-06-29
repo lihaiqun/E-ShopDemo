@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-// import detailShop from '@/views/detail/detailShop/store';
+import detailShop from '@/views/detail/detailShop/store';
 
 const IndexReducer = (
   state = {
@@ -18,7 +18,7 @@ switch (type) {
 }
 
 const reducer = combineReducers({
-  // detailShop,
+  detailShop,
   IndexReducer
 })
 
