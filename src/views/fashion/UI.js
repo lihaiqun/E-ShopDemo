@@ -49,7 +49,7 @@ class Com extends React.Component {
                   </div>
                   <div className = "nickname"> { item.nickname } </div>
                   <div className = "share_way">
-                    <div className = "like"><i><img src = {require("@/images/fashion/sharelink.png")} alt = "图片马上来" /></i><span>喜欢</span></div>
+                    <div className = "like"><i><img src = {require("@/images/fashion/heart.png")} alt = "图片马上来" /></i><span>喜欢</span></div>
                     <div className = "share_to"><i><img src = {require("@/images/fashion/sharelink.png")} alt = "图片马上来" /></i><span>分享</span></div>
                     <div className = "weibo"><i>3个小时前</i></div>
                   </div>
@@ -75,14 +75,14 @@ class Com extends React.Component {
                     <img src = {require("@/images/fashion/share1-3.png")} alt = "图片马上来" />
                     <img src = {require("@/images/fashion/share1-4.png")} alt = "图片马上来" />
                     <img src = {require("@/images/fashion/share1-5.png")} alt = "图片马上来" />
-                    <img src = {require("@/images/fashion/share1-7.png")} alt = "图片马上来" />
+                    <img src = {require("@/images/fashion/share1-6.png")} alt = "图片马上来" />
                     <img src = {require("@/images/fashion/share1-7.png")} alt = "图片马上来" />
                     <img src = {require("@/images/fashion/share1-8.png")} alt = "图片马上来" />
-                    <img src = {require("@/images/fashion/share1-4.png")} alt = "图片马上来" />
+                    <img src = {require("@/images/fashion/share1-9.png")} alt = "图片马上来" />
                   </div>
                   <div className = "nickname">#假两件卫衣裙</div>
                   <div className = "share_way">
-                    <div className = "like"><i><img src = {require("@/images/fashion/sharelink.png")} alt = "图片马上来" /></i><span>喜欢</span></div>
+                    <div className = "like"><i><img src = {require("@/images/fashion/heart.png")} alt = "图片马上来" /></i><span>喜欢</span></div>
                     <div className = "share_to"><i><img src = {require("@/images/fashion/sharelink.png")} alt = "图片马上来" /></i><span>分享</span></div>
                     <div className = "weibo"><i>3个小时前</i></div>
                   </div>
@@ -102,7 +102,7 @@ class Com extends React.Component {
                   </div>
                   <div className = "nickname">#假两件卫衣裙</div>
                   <div className = "share_way">
-                    <div className = "like"><i><img src = {require("@/images/fashion/sharelink.png")} alt = "图片马上来" /></i><span>喜欢</span></div>
+                    <div className = "like"><i><img src = {require("@/images/fashion/heart.png")} alt = "图片马上来" /></i><span>喜欢</span></div>
                     <div className = "share_to"><i><img src = {require("@/images/fashion/sharelink.png")} alt = "图片马上来" /></i><span>分享</span></div>
                     <div className = "weibo"><i>3个小时前</i></div>
                   </div>
@@ -122,7 +122,7 @@ class Com extends React.Component {
                   </div>
                   <div className = "nickname">#假两件卫衣裙</div>
                   <div className = "share_way">
-                    <div className = "like"><i><img src = {require("@/images/fashion/sharelink.png")} alt = "图片马上来" /></i><span>喜欢</span></div>
+                    <div className = "like"><i><img src = {require("@/images/fashion/heart.png")} alt = "图片马上来" /></i><span>喜欢</span></div>
                     <div className = "share_to"><i><img src = {require("@/images/fashion/sharelink.png")} alt = "图片马上来" /></i><span>分享</span></div>
                     <div className = "weibo"><i>3个小时前</i></div>
                   </div>
@@ -146,7 +146,7 @@ class Com extends React.Component {
                   </div>
                   <div className = "nickname">#假两件卫衣裙</div>
                   <div className = "share_way">
-                    <div className = "like"><i><img src = {require("@/images/fashion/sharelink.png")} alt = "图片马上来" /></i><span>喜欢</span></div>
+                    <div className = "like"><i><img src = {require("@/images/fashion/heart.png")} alt = "图片马上来" /></i><span>喜欢</span></div>
                     <div className = "share_to"><i><img src = {require("@/images/fashion/sharelink.png")} alt = "图片马上来" /></i><span>分享</span></div>
                     <div className = "weibo"><i>3个小时前</i></div>
                   </div>

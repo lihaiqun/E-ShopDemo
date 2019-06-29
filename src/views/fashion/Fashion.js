@@ -9,7 +9,6 @@ const mapDispatchToProps = (dispatch) => {
   return {
     getFashionNetRed () {
       api.reqGetData("fashion").then(data => {
-        // console.log(data)
         dispatch({
           type: "changeFashionNetRed",
           data
