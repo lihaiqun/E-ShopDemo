@@ -1,45 +1,102 @@
 @import '@/lib/reset.scss';
 #home {
-  header {
-    @include flexbox();
-    justify-content: space-between;
-    align-items: center;
-    button {
-      height: .5rem;
-      width: .57rem;
-    }
-    span {
-      width: 2.37rem;
-      height: .28rem;
-      font-size: .14rem;
-      line-height: .28rem;
-      text-align: center;
-      border: .01rem solid #bbb;
-      color: #aaa;
-    }
-  }
-  .banner {
-    width: 100%;
-    height: .9rem;
+  .top {
     position: relative;
-    &:after {
-      content: '广告';
-      width: .31rem;
-      height: .21rem;
-      left: 0px;
-      line-height: .17rem;
-      background-color: rgba(227, 225, 225, 1);
-      color: rgba(170, 170, 170, 1);
-      font-size: 12px;
-      text-align: center;
-      border: .01rem solid rgba(255, 255, 255, 0);
+      header {
+      z-index: 1;
       position: absolute;
+      top: 0;
       left: 0;
-      bottom: 0;
+      right: 0;
+      @include flexbox();
+      padding: 0 .08rem;
+      justify-content: space-between;
+      align-items: center;
+      height: .44rem;
+      background-color:rgba(0,0,0,.4);;
+      button {
+        height: .24rem;
+        width: .24rem;
+        border: 0;background: none;
+      }
+      .scanner {
+        background: url(../../images/home/scanner.png);
+        background-size: .24rem .24rem;
+
+      }
+      .msg {
+        background: url(../../images/home/msg.png);
+        background-size: .24rem .24rem;
+      }
+      span {
+        background: #fff;
+        padding-left: .3rem;
+        position: relative;
+        width: 2.75rem;
+        height: .3rem;
+        font-size: .12rem;
+        line-height: .3rem;
+        border-radius: .05rem;
+        text-align: left;
+        color: #ccc;
+        &::before {
+          content: '';
+          display: block;
+          width: .18rem;
+          height: .18rem;
+          background: url(../../images/home/loupe.png);
+          background-size: .18rem .18rem;
+          position: absolute;
+          left: .08rem;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+        }
+        &::after {
+          content: '';
+          display: block;
+          width: .24rem;
+          height: .21rem;
+          background: url(../../images/home/camera.png);
+          background-size: .24rem .21rem;
+          position: absolute;
+          right: .08rem;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+        }
+      }
+    }
+    .banner {
+      position: relative;
+      a {
+        display: block;
+        img {
+          display: block;
+          height: 2.1rem;
+        }
+      }
+      &:after {
+        content: '广告';
+        width: .31rem;
+        height: .21rem;
+        left: 0px;
+        line-height: .17rem;
+        background-color: rgba(227, 225, 225, 1);
+        color: rgba(170, 170, 170, 1);
+        font-size: 12px;
+        text-align: center;
+        border: .01rem solid rgba(255, 255, 255, 0);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
     }
   }
+
+
   nav {
-    margin-top: .2rem;
+    margin-top: .25rem;
     @include flexbox();
     justify-content: space-around;
     align-items: center;
@@ -52,25 +109,49 @@
           overflow: hidden;
           display: block;
           border-radius: 50%;
-          @include rect(.7rem,.7rem);
-          border: .01rem solid rgba(187, 187, 187, 1);
+          @include rect(.78rem,.78rem);
         }
       }
       p {
-        @include rect(.75rem,.3rem);
-        line-height: .3rem;
-        background-color: rgba(255, 255, 255, 0);
-        color: rgba(170, 170, 170, 1);
+        margin-top: .21rem;
+        margin-bottom: .25rem;
+        @include rect(.78rem,.14rem);
+        line-height: .14rem;
+        color: #333;
         font-size: .14rem;
       }
     }
   }
   .classify {
-    margin-top: .4rem;
+    padding: .15rem 0;
+    background: #f5f5f5;
     div {
-      border: .01rem solid rgba(187, 187, 187, 1);
-      @include rect(3.35rem,1.1rem);
-      margin: 0 auto .2rem;
+      a {
+        display: block;
+        img {
+          margin: 0 auto;
+          display: block;
+          width: 3.59rem;
+          height: 1.4rem;
+        }
+      }
+    }
+    .female {
+      margin-bottom: .08rem;
+    }
+  }
+  .subnav-contain {
+    display: flex;
+    flex-wrap: wrap;
+    .subnav:first-of-type {
+      border-right: .01rem solid #ccc;
+      border-bottom: .01rem solid #ccc;
+    }
+    .subnav:nth-child(2) {
+      border-bottom: .01rem solid #ccc;
+    }
+    .subnav:nth-child(3) {
+      border-right: .01rem solid #ccc;
     }
   }
   .recommend {
