@@ -113,6 +113,7 @@
       .right {
         @include rect(.1rem, .18rem);
         margin-right: .14rem;
+        background: url('./../../images/detail/rightback.png') no-repeat center;
       }
     }
 
@@ -217,6 +218,7 @@
           right: .1rem;
           top: .13rem;
           @include rect(.12rem, .12rem);
+          background: url( './../../images/detail/cancel.png') no-repeat center;
         }
       }
 
@@ -232,6 +234,7 @@
           .icon {
             @include rect(.16rem, .16rem);
             margin: 0 .15rem 0 .08rem;
+            background: url( './../../images/detail/check.png') no-repeat center;
           }
           .tel {
             @include align-self(start);
@@ -247,9 +250,15 @@
                 display: inline-block;
                 @include rect(.1rem, .12rem);
                 margin-right: .03rem;
+                background: url( './../../images/detail/position.png') no-repeat center;
               }
             }
           }
+          &.active {
+            .icon {
+              background: url( './../../images/detail/checked.png') no-repeat center;
+            }
+        }
         }
       }
 
@@ -346,7 +355,7 @@
       border-radius: .08rem .08rem 0 0;
       @include flexbox();
       @include flex-direction(column);
-      overflow: hidden;
+      overflow: auto;
       .top {
         @include rect(100%, .38rem);
         text-align: center;
@@ -359,6 +368,60 @@
           right: .1rem;
           top: .13rem;
           @include rect(.12rem, .12rem);
+          background: url( './../../images/detail/cancel.png') no-repeat center;
+        }
+      }
+      .received {
+        @include rect(100%, auto);
+        .title {
+
+          @include rect(100%, .22rem);
+          font: .16rem/.22rem "";
+          color: #333;
+          margin-top: .12rem;
+        }
+        ul {
+          @include rect(100%, auto);
+          li {
+            @include rect(3.59rem, .76rem);
+            margin: 0 auto .15rem;
+            background: url( './../../images/detail/couponbg.png') no-repeat center;
+            @include flexbox();
+            @include align-items();
+            .price {
+              @include rect(.89rem, .6rem);
+              text-align: center;
+              p {
+                font-size: .26rem;
+                color: #fff;
+                height: .3rem;
+              }
+              span {
+                font: .12rem/.26rem "";
+                color: #fff;
+              }
+            }
+            .vertical {
+              @include rect(1px, .48rem);
+              background: #fff;
+            }
+            .produce {
+              @include flex();
+              font: .12rem/.3rem "";
+              color: #fff;
+              padding-left: .17rem;
+            }
+            .state {
+              @include rect(.55rem, .18rem);
+              @include border-radius(.03rem);
+              text-align: center;
+              @include box-sizing();
+              font: .12rem/.16rem "";
+              color:#fff;
+              margin-right: .11rem;
+              border: 1px solid #fff;
+            }
+          }
         }
       }
     }

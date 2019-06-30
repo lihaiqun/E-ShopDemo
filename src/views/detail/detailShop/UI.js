@@ -9,7 +9,6 @@ import DetailCoupon from '@/components/detail/detailCoupon';
 class Com extends React.Component {
   constructor(props){
     super(props);
-    this.myRef=React.createRef();
   }
   
   componentDidMount () {
@@ -18,7 +17,6 @@ class Com extends React.Component {
 
 // 要修改
   render () {
-    console.log(this)
     return (
       <div className = "detail_main">
         <Carousel
@@ -39,17 +37,13 @@ class Com extends React.Component {
         <div className = "detail_main-coupon" onClick = { () => { this.props.setDetailCouponFlag() } }>
           <span className = "left">领券</span>
           <span className = "center"></span>
-          <i className = "right"  style = {{
-            background: `url(${ require('@/images/detail/rightback.png') }) no-repeat center`
-          }}></i>
+          <i className = "right"></i>
         </div>
 
         <div className = "detail_main-adress" onClick = { () => { this.props.changeMoreAdressFlag();} }>
           <span className = "left">送至</span>
           <span className = "center">{ this.props.setAdress }</span>
-          <i className = "right"  style = {{
-            background: `url(${ require('@/images/detail/rightback.png') }) no-repeat center`
-          }}></i>
+          <i className = "right"></i>
         </div>
         { this.props.moreAdressFlag ? <ChooseAdress props = { this.props } /> : null }
         { this.props.otherAdressFlag ? <OtherAdress props = { this.props } /> : null }

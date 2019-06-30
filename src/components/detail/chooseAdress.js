@@ -20,70 +20,53 @@ export default class Com extends React.Component {
         <div className = "adress">
           <div className = "top">
             更多地址
-            <i className = "cancel"  style = {{
-                background: `url(${ require('@/images/detail/cancel.png') }) no-repeat center`
-              }}  onClick = { () => { this.props.props.changeMoreAdressFlag() } }></i>
+            <i className = "cancel" onClick = { () => { this.props.props.changeMoreAdressFlag() } }></i>
           </div>
           <ul className = "adressInfo">
             <li ref = "adress1" onClick = { () => { 
               for (let i in this.refs) {
-                this.refs[i].children[0].style.background = `url(${ require('@/images/detail/check.png') }) no-repeat center`;
+                this.refs[i].className = ""
               } 
+              this.refs.adress1.className = "active";
+              
               const arr = this.refs.adress1.children[1].children[1].innerText.split(' ')
               const str = arr.slice(0, arr.length-1).join('');
               this.props.props.changeSetAdress(str);
-
-              this.refs.adress1.children[0].style.background = `url(${ require('@/images/detail/checked.png') }) no-repeat center`
               }}>
-                <i className = "icon" style = {{
-                background: `url(${ require('@/images/detail/check.png') }) no-repeat center`
-              }}></i>
+                <i className = "icon"></i>
                 <div className = "information">
-                  <p><i  style = {{
-                    background: `url(${ require('@/images/detail/position.png') }) no-repeat center`
-                  }}></i> 张小白</p>
+                  <p><i></i> 张小白</p>
                   <p>江苏省 南通市 徐泾镇龙联路128弄56号</p>
                 </div>
                 <div className = "tel">18852981701</div>
             </li>
             <li ref = "adress2" onClick = { () => { 
-              for (let i in this.refs) {
-                this.refs[i].children[0].style.background = `url(${ require('@/images/detail/check.png') }) no-repeat center`;
-              } 
+                for (let i in this.refs) {
+                  this.refs[i].className = ""
+                } 
+                this.refs.adress2.className = "active"; 
               const arr = this.refs.adress2.children[1].children[1].innerText.split(' ')
               const str = arr.slice(0, arr.length-1).join('');
               this.props.props.changeSetAdress(str);
-
-              this.refs.adress2.children[0].style.background = `url(${ require('@/images/detail/checked.png') }) no-repeat center`
               }}>
-                <i className = "icon" style = {{
-                background: `url(${ require('@/images/detail/check.png') }) no-repeat center`
-              }}></i>
+                <i className = "icon"></i>
                 <div className = "information">
-                  <p><i  style = {{
-                    background: `url(${ require('@/images/detail/position.png') }) no-repeat center`
-                  }}></i> 张小白</p>
+                  <p><i></i> 张小白</p>
                   <p>安徽省 宣城市 宣州区 徐泾镇龙联路128弄56号</p>
                 </div>
                 <div className = "tel">18852981701</div>
             </li>
             <li ref = "adress3" onClick = { () => { 
-              for (let i in this.refs) {
-                this.refs[i].children[0].style.background = `url(${ require('@/images/detail/check.png') }) no-repeat center`;
-              } 
+              for (let i in this.refs) { this.refs[i].className = "" } 
+              this.refs.adress3.className = "active";
+
               const arr = this.refs.adress3.children[1].children[1].innerText.split(' ')
               const str = arr.slice(0, arr.length-1).join('');
               this.props.props.changeSetAdress(str);
-
-              this.refs.adress3.children[0].style.background = `url(${ require('@/images/detail/checked.png') }) no-repeat center`
               }}>
-                <i className = "icon" style = {{
-                background: `url(${ require('@/images/detail/check.png') }) no-repeat center`
-              }}></i>
+                <i className = "icon"></i>
                 <div className = "information">
-                  <p><i  style = {{
-                    background: `url(${ require('@/images/detail/position.png') }) no-repeat center`
-                  }}></i> 张小白</p>
+                  <p><i></i> 张小白</p>
                   <p>上海 上海市 青浦区 徐泾镇龙联路128弄56号</p>
                 </div>
                 <div className = "tel">18852981701</div>

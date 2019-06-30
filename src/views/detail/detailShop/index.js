@@ -4,9 +4,11 @@ import UI from './UI';
 const mapStateToPorps = (state) => {
   return ({
     moreAdressFlag: state.detail.detailShop.moreAdressFlag,
-    setAdress: state.detail.detailShop.setAdress,
     otherAdressFlag: state.detail.detailShop.otherAdressFlag,
-    detailCouponFlag: state.detail.detailShop.detailCouponFlag
+    detailCouponFlag: state.detail.detailShop.detailCouponFlag,
+    setAdress: state.detail.detailShop.setAdress,
+    receviedArr: state.detail.detailShop.receviedArr,
+    noReceviedArr: state.detail.detailShop.noReceviedArr
 })}
 
 const mapDispatchToProps = (dispatch) => ({
@@ -33,7 +35,19 @@ const mapDispatchToProps = (dispatch) => ({
       type : "setDetailCouponFlag",
       data: !this.detailCouponFlag
     })
-  }
+  },
+  setReceviedArr (data) {
+    dispatch({
+      type : "setReceviedArr",
+      data
+    })
+  },
+  setNoReceviedArr (data) {
+    dispatch({
+      type : "setNoReceviedArr",
+      data
+    })
+  },
 })
 
 const Com = connect(mapStateToPorps, mapDispatchToProps)(UI)
