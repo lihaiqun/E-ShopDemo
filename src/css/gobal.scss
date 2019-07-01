@@ -13,26 +13,58 @@ html, body, #root, .container {
   }
   @import url('//at.alicdn.com/t/font_1225232_e28vy1kaiqv.css');
 footer {
-    @include flex(0 0 0.5rem);
+    @include flex(0 0 0.49rem);
     width: 100%;
+    padding: 0 .25rem;
 ul {
     @include flexbox();
     width: 100%;
+    height: .49rem;
     justify-content: space-between;
+    align-items: center;
         li {
             text-align: center;
             span {
               display: block;
               width: 0.4rem;
-              font-size: 0.3rem;
-              line-height: 0.3rem;
-              &:before {
-                font-size: 0.2rem;
+              width: .3rem;
+              height: .3rem;
+              background: url('../images/common/footer.png') no-repeat;
+              background-size: 1.2rem .6rem;
+              background-position: 0 -.3rem;
+              &.find-icon {
+                background-position: -.3rem -.3rem;
+              }
+              &.fashion-icon {
+                background-position: -.6rem -.3rem;
+              }
+              &.user-icon {
+                background-position: -.9rem -.3rem;
               }
             }
-            a {color: #333;}
+            p {
+              font-size: .1rem;
+              line-height: .1rem;
+              height: .1rem;
+              margin-top: .03rem;
+            }
+            a {display: block;color: #999;}
             a.active {
-              color: red
+              color: #e10303;
+              span {
+                &.home-icon {
+                  background-position: 0 0;
+                }
+                &.find-icon {
+                  background-position: -.3rem 0;
+                }
+                &.fashion-icon {
+                  background-position: -.6rem 0;
+                }
+                &.user-icon {
+                  background-position: -.9rem 0;
+                }
+              }
             }
         }
     }

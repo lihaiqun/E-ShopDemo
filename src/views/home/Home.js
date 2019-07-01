@@ -3,7 +3,8 @@ import action from './action'
 import UI from './UI';
 const mapStateToProps = (state) => {
   return {
-    bannerList: state.home.homeBannerList
+    bannerList: state.home.homeBannerList,
+    subnavList: state.home.subnavList
   }
 }
 const mapDispatchToProps = (dispatch) => {
