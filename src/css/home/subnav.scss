@@ -1,0 +1,47 @@
+.subnav {
+  box-sizing: border-box;
+  padding: .11rem .04rem .13rem .1rem;
+  width: 1.87rem;
+  .title {
+    font-size: .12rem;
+    color: #333;
+    line-height: .12rem;
+    height: .12rem;
+  }
+  .desc {
+    margin-top: .08rem;
+    font-size: .09rem;
+    color: #999;
+    line-height: .09rem;
+    height: .09rem;
+  }
+  .pro-contain {
+    margin-top: .04rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      display: block;
+      img {
+        display: block;
+        width: .85rem;
+        height: .85rem;
+      }
+      .price-contain {
+        margin-top: .03rem;
+        text-align: center;
+      }
+      span {
+        font-size: .12rem;
+        color: #c00;
+        line-height: .12rem;
+        height: .12rem;
+      }
+      .origin {
+        margin-left: .04rem;
+        color: #999;
+        text-decoration: line-through;
+      }
+    }
+  }
+}

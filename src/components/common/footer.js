@@ -5,26 +5,26 @@ const Footer = () => (
   <ul>
     <li>
       <NavLink to='/home'>
-        <span className="iconfont icon-shouye"></span>
+        <span className="home-icon"></span>
         <p>首页</p>
       </NavLink>
     </li>
     <li>
       <NavLink to='/find'>
-        <span className="iconfont icon-gejuyuan"></span>
+        <span className="find-icon"></span>
         <p>发现</p>
       </NavLink>
     </li>
     <li>
       <NavLink to='/fashion'>
-        <span className="iconfont icon-piaojia"></span>
+        <span className="fashion-icon"></span>
         <p>时尚</p>
       </NavLink>
     </li>
     <li>
       <NavLink to='/user'>
-      	<span className="iconfont icon-iconfuzhi"></span>
-      	<p>我</p>
+      	<span className="user-icon"></span>
+      	<p>我的</p>
       </NavLink>
     </li>
   </ul>
