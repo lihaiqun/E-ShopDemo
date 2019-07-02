@@ -15,12 +15,12 @@ export default class Com extends React.Component {
       { opacity: [1, 0], translateY: [0, -50] }
     ]}
     >
-      <div className = "detail_main-moreAdress" key = "a">
-        <div className = "other" onClick = { () => { this.props.props.changeMoreAdressFlag() } }></div>
+      <div className = "detail_main-moreAdress" key = "moreAdress">
+        <div className = "other" onClick = { () => { this.props.chooseAdressProps.changeMoreAdressFlag() } }></div>
         <div className = "adress">
           <div className = "top">
             更多地址
-            <i className = "cancel" onClick = { () => { this.props.props.changeMoreAdressFlag() } }></i>
+            <i className = "cancel" onClick = { () => { this.props.chooseAdressProps.changeMoreAdressFlag() } }></i>
           </div>
           <ul className = "adressInfo">
             <li ref = "adress1" onClick = { () => { 
@@ -31,7 +31,7 @@ export default class Com extends React.Component {
               
               const arr = this.refs.adress1.children[1].children[1].innerText.split(' ')
               const str = arr.slice(0, arr.length-1).join('');
-              this.props.props.changeSetAdress(str);
+              this.props.chooseAdressProps.changeSetAdress(str);
               }}>
                 <i className = "icon"></i>
                 <div className = "information">
@@ -47,7 +47,7 @@ export default class Com extends React.Component {
                 this.refs.adress2.className = "active"; 
               const arr = this.refs.adress2.children[1].children[1].innerText.split(' ')
               const str = arr.slice(0, arr.length-1).join('');
-              this.props.props.changeSetAdress(str);
+              this.props.chooseAdressProps.changeSetAdress(str);
               }}>
                 <i className = "icon"></i>
                 <div className = "information">
@@ -62,7 +62,7 @@ export default class Com extends React.Component {
 
               const arr = this.refs.adress3.children[1].children[1].innerText.split(' ')
               const str = arr.slice(0, arr.length-1).join('');
-              this.props.props.changeSetAdress(str);
+              this.props.chooseAdressProps.changeSetAdress(str);
               }}>
                 <i className = "icon"></i>
                 <div className = "information">
@@ -73,8 +73,8 @@ export default class Com extends React.Component {
             </li>
           </ul>
           <div className = "addAdress"  onClick = { () => { 
-            this.props.props.changeMoreAdressFlag();
-            this.props.props.setOtherAdress();
+            this.props.chooseAdressProps.changeMoreAdressFlag();
+            this.props.chooseAdressProps.setOtherAdress();
             } } >
             选择其他配送地址
           </div>

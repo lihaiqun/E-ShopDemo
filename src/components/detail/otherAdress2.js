@@ -26,7 +26,7 @@ export default class Com extends React.Component {
       { opacity: [1, 0], translateY: [0, -50] }
     ]}
     >
-      <div className = "detail_main-otherAdress" key = "b">
+      <div className = "detail_main-otherAdress" key = "otherAdress2">
         <div className = "adress">
           <div className = "top">
             所在地区

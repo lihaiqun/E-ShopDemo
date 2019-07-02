@@ -5,6 +5,8 @@ import ChooseAdress from '@/components/detail/chooseAdress';
 import OtherAdress from '@/components/detail/otherAdress';
 import OtherAdress2 from '@/components/detail/otherAdress2';
 import DetailCoupon from '@/components/detail/detailCoupon';
+import DetailStyle from '@/components/detail/detailStyle';
+import MoreServer from '@/components/detail/moreServer';
 
 class Com extends React.Component {
   constructor(props){
@@ -40,14 +42,49 @@ class Com extends React.Component {
           <i className = "right"></i>
         </div>
 
-        <div className = "detail_main-adress" onClick = { () => { this.props.changeMoreAdressFlag();} }>
+        <div className = "detail_main-choose" onClick = { () => { this.props.changeDetailStyleFlag() } }>
+          <span className = "left">已选</span>
+          <span className = "center">请选择颜色，尺码</span>
+          <i className = "right"></i>
+        </div>
+
+        <div className = "detail_main-choose" onClick = { () => { this.props.changeMoreAdressFlag();} }>
           <span className = "left">送至</span>
           <span className = "center">{ this.props.setAdress }</span>
           <i className = "right"></i>
         </div>
-        { this.props.moreAdressFlag ? <ChooseAdress props = { this.props } /> : null }
-        { this.props.otherAdressFlag ? <OtherAdress props = { this.props } /> : null }
-        { this.props.detailCouponFlag ? <DetailCoupon props = { this.props } /> : null }
+
+        <div className = "detail_main-choose" onClick = { () => { this.props.changeMoreServerFlag();} }>
+          <span className = "left">服务</span>
+          <div className = "center">
+            <span>满88元包邮</span>
+            <span>官方自营</span>
+            <span>七天无理由</span>
+          </div>
+          <i className = "right"></i>
+        </div>
+
+        <div className = "detail_main-Album" onClick = { () => { this.props.changeMoreServerFlag();} }>
+          <div className = "satisfied">
+            <span className = "left">买家相册</span>
+            <div className = "center">
+              满意率：98%
+            </div>
+            <i className = "right"></i>
+          </div>
+          <ul className = "evaluate">
+            <li>质量很好(653)</li>
+            <li>很合身(653)</li>
+            <li>很舒服(259)</li>
+            <li>是正品(325)</li>
+          </ul>
+          <div className = "photo"></div>
+        </div>
+        { this.props.moreAdressFlag ? <ChooseAdress chooseAdressProps = { this.props } /> : null }
+        { this.props.otherAdressFlag ? <OtherAdress otherAdressProps = { this.props } /> : null }
+        { this.props.detailCouponFlag ? <DetailCoupon detailCouponProps = { this.props } /> : null }
+        { this.props.detailStyleFlag ? <DetailStyle detailStyleProps = { this.props } /> : null }
+        { this.props.moreServerFlag ? <MoreServer moreServerProps = { this.props } /> : null }
         <Route path = {this.props.match.url + "/:name"} exact component = { OtherAdress2 }/>
       </div>
     )

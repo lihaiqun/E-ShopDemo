@@ -8,12 +8,8 @@ export default class Com extends React.Component {
   }
 
   componentDidMount () {
-    this.props.props.setNoReceviedArr(this.props.props.noReceviedArr);
-    this.props.props.setReceviedArr(this.props.props.receviedArr);
   }
   render () {
-    console.log(this)
-
   return(
     <QueueAnim
     animConfig={[
@@ -21,18 +17,18 @@ export default class Com extends React.Component {
       { opacity: [1, 0], translateY: [0, -50] }
     ]}
     >
-      <div className = "detail_main-otherCoupon" key = "">
-      <div className = "other" onClick = { () => { this.props.props.setDetailCouponFlag() } }></div>
+      <div className = "detail_main-otherCoupon" key = "detailCoupon">
+        <div className = "other" onClick = { () => { this.props.detailCouponProps.setDetailCouponFlag() } }></div>
         <div className = "coupon">
           <div className = "top">
             优惠券
-            <i className = "cancel" onClick = { () => { this.props.props.setDetailCouponFlag() } }></i>
+            <i className = "cancel" onClick = { () => { this.props.detailCouponProps.setDetailCouponFlag() } }></i>
           </div>
           <div className = "received">
             <p className = "title">已领取</p>
             <ul>
               {
-                this.props.props.receviedArr.map(item => (
+                this.props.detailCouponProps.receviedArr.map(item => (
                   <li key = { item.id }>
                     <div className = "price">
                       <p>￥{ item.price }</p>
@@ -44,7 +40,6 @@ export default class Com extends React.Component {
                       <p className = "date">{ item.date }</p>
                     </div>
                     <div className = "state">已领取</div>
-
                   </li>
                 ))
               }
@@ -54,7 +49,7 @@ export default class Com extends React.Component {
             <p className = "title">未领取</p>
             <ul>
               {
-                this.props.props.noReceviedArr.map(item => (
+                this.props.detailCouponProps.noReceviedArr.map(item => (
                   <li key = { item.id }>
                     <div className = "price">
                       <p>￥{ item.price }</p>
@@ -66,12 +61,12 @@ export default class Com extends React.Component {
                       <p className = "date">{ item.date }</p>
                     </div>
                     <div className = "state" xw = { item.id } onClick = { (e) => {
-                      for (let i = 0; i < this.props.props.noReceviedArr.length; i++) {
-                        if (this.props.props.noReceviedArr[i].id === e.target.getAttribute("xw")) {
-                            this.props.props.receviedArr.push(this.props.props.noReceviedArr[i]);
-                            this.props.props.noReceviedArr.splice(i, 1);
-                            this.props.props.setNoReceviedArr(this.props.props.noReceviedArr);
-                            this.props.props.setReceviedArr(this.props.props.receviedArr);
+                      for (let i = 0; i < this.props.detailCouponProps.noReceviedArr.length; i++) {
+                        if (this.props.detailCouponProps.noReceviedArr[i].id === e.target.getAttribute("xw")) {
+                          let arr = [...this.props.detailCouponProps.receviedArr,this.props.detailCouponProps.noReceviedArr[i]]
+                          this.props.detailCouponProps.setReceviedArr(arr);
+                          this.props.detailCouponProps.noReceviedArr.splice(i, 1);
+                          this.props.detailCouponProps.setNoReceviedArr(this.props.detailCouponProps.noReceviedArr);
                         }
                       }
                     }}>领取</div>
