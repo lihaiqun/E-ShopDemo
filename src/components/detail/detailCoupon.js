@@ -8,8 +8,6 @@ export default class Com extends React.Component {
   }
 
   componentDidMount () {
-    this.props.props.setNoReceviedArr(this.props.props.noReceviedArr);
-    this.props.props.setReceviedArr(this.props.props.receviedArr);
   }
   render () {
     console.log(this)
@@ -21,8 +19,8 @@ export default class Com extends React.Component {
       { opacity: [1, 0], translateY: [0, -50] }
     ]}
     >
-      <div className = "detail_main-otherCoupon" key = "">
-      <div className = "other" onClick = { () => { this.props.props.setDetailCouponFlag() } }></div>
+      <div className = "detail_main-otherCoupon" key = "detailCoupon">
+        <div className = "other" onClick = { () => { this.props.props.setDetailCouponFlag() } }></div>
         <div className = "coupon">
           <div className = "top">
             优惠券
@@ -44,7 +42,6 @@ export default class Com extends React.Component {
                       <p className = "date">{ item.date }</p>
                     </div>
                     <div className = "state">已领取</div>
-
                   </li>
                 ))
               }
@@ -68,10 +65,10 @@ export default class Com extends React.Component {
                     <div className = "state" xw = { item.id } onClick = { (e) => {
                       for (let i = 0; i < this.props.props.noReceviedArr.length; i++) {
                         if (this.props.props.noReceviedArr[i].id === e.target.getAttribute("xw")) {
-                            this.props.props.receviedArr.push(this.props.props.noReceviedArr[i]);
-                            this.props.props.noReceviedArr.splice(i, 1);
-                            this.props.props.setNoReceviedArr(this.props.props.noReceviedArr);
-                            this.props.props.setReceviedArr(this.props.props.receviedArr);
+                          let arr = [...this.props.props.receviedArr,this.props.props.noReceviedArr[i]]
+                          this.props.props.setReceviedArr(arr);
+                          this.props.props.noReceviedArr.splice(i, 1);
+                          this.props.props.setNoReceviedArr(this.props.props.noReceviedArr);
                         }
                       }
                     }}>领取</div>

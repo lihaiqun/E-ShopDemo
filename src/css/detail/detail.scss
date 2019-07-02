@@ -96,12 +96,13 @@
         margin-top: .08rem; 
       }
     }
-    .detail_main-adress,.detail_main-coupon {
+    .detail_main-choose,.detail_main-coupon {
       @include rect(100%, .44rem);
       @include flexbox();
       @include align-items();
       background: #fff;
       font-size: .15rem;
+      border-bottom: 1px solid #f8f8f8;
       .left {
         color: #999;
         margin: 0 .17rem 0 .08rem;
@@ -426,4 +427,146 @@
       }
     }
   }
+
+  .detail_main-detailstyle {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 200;
+    background: rgba(0,0,0,.5);
+    .other {
+      @include rect(100%, 100%);
+    }
+    .detailstyle {
+      @include rect(100%, 4.8rem);
+      background: #fff;
+      position: absolute;
+      bottom:0;
+      border-radius: .08rem .08rem 0 0;
+      @include flexbox();
+      @include flex-direction(column);
+      overflow: auto;
+      padding-left: .08rem;
+      .top {
+        @include rect(100%, .38rem);
+        text-align: center;
+        font: .16rem/.38rem "";
+        color: #333;
+        position: relative;
+        .cancel {
+          position: absolute;
+          right: .1rem;
+          top: .13rem;
+          @include rect(.12rem, .12rem);
+          background: url( './../../images/detail/cancel.png') no-repeat center;
+        }
+      }
+      .main {
+        @include rect(100%, 4.42rem);
+        @include flexbox();
+        @include flex-direction(column);
+        .main_top {
+          @include rect(100%, 1rem);
+          @include flexbox();
+          @include align-items();
+          margin-bottom: .16rem;
+          .img {
+            @include rect(1rem, 1rem);
+            background: #ccc;
+          }
+          .main_top-Specifications {
+            @include flex();
+            @include rect(auto, 100%);
+            padding-left: .13rem;
+            h4 {
+              @include rect(100%, .16rem);
+              font-size: .12rem;
+              font-weight: 400;
+              color: #c00;
+              margin-top: .34rem;
+              span {
+                font-size: .16rem;
+              }
+            }
+            h5 {
+              @include rect(100%, .16rem);
+              font-size: .12rem;
+              font-weight: 400;
+              color: #999;
+              margin-top: .14rem;
+              
+            }
+          }
+        }
+        .main_center {
+          @include flex();
+          @include rect(100%, auto);
+          .main_center-style {
+            @include rect(100%, auto);
+            margin-top: .06rem;
+            p {
+              color: #999;
+              font-size: .12rem;
+              margin-bottom: .09rem;
+            }
+            ul {
+              overflow: hidden;
+              @include rect(100%, auto);
+              li {
+                float: left;
+                padding: .06rem .1rem;
+                background: #FEF5F6;
+                color: #333;
+                @include border-radius(2px);
+                font-size: .12rem;
+                margin: 0 .1rem .13rem 0;
+                &.active {
+                  border: 1px solid #c00;
+                  color: #c00;
+                  padding: .05rem .09rem;
+                }
+              }
+            }
+          }
+          .am-stepper.showNumber {
+            @include rect(.76rem, .22rem);
+            .am-stepper-handler-up,.am-stepper-handler-down {
+              @include rect(.22rem, .22rem);
+              font: .16rem/.24rem "";
+            }
+            .am-stepper-input-wrap {
+              height: .22rem;
+              line-height: .22rem;
+              .am-stepper-input {
+                height: .22rem;
+              }
+            }
+          }
+        }
+        .main_bottom {
+          @include rect(100%, .46rem);
+          @include flexbox();
+          @include justify-content();
+          .main_bottom-addCart {
+            @include rect(1.78rem, .36rem);
+            border-radius: .18rem 0 0 .18rem;
+            background: #FFA325;
+            text-align: center;
+            color: #fff;
+            border: none;
+          }
+          .main_bottom-buyNow {
+            @include rect(1.78rem, .36rem);
+            border-radius: 0 .18rem .18rem 0;
+            background: #C00;
+            border: none;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
 }

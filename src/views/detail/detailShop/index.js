@@ -6,6 +6,7 @@ const mapStateToPorps = (state) => {
     moreAdressFlag: state.detail.detailShop.moreAdressFlag,
     otherAdressFlag: state.detail.detailShop.otherAdressFlag,
     detailCouponFlag: state.detail.detailShop.detailCouponFlag,
+    detailStyleFlag: state.detail.detailShop.detailStyleFlag,
     setAdress: state.detail.detailShop.setAdress,
     receviedArr: state.detail.detailShop.receviedArr,
     noReceviedArr: state.detail.detailShop.noReceviedArr
@@ -34,6 +35,12 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch({
       type : "setDetailCouponFlag",
       data: !this.detailCouponFlag
+    })
+  },
+  setDetailStyleFlag () {
+    dispatch({
+      type : "setDetailStyleFlag",
+      data: !this.detailStyleFlag
     })
   },
   setReceviedArr (data) {

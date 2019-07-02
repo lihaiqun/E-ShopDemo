@@ -5,6 +5,7 @@ import ChooseAdress from '@/components/detail/chooseAdress';
 import OtherAdress from '@/components/detail/otherAdress';
 import OtherAdress2 from '@/components/detail/otherAdress2';
 import DetailCoupon from '@/components/detail/detailCoupon';
+import DetailStyle from '@/components/detail/detailStyle';
 
 class Com extends React.Component {
   constructor(props){
@@ -40,7 +41,13 @@ class Com extends React.Component {
           <i className = "right"></i>
         </div>
 
-        <div className = "detail_main-adress" onClick = { () => { this.props.changeMoreAdressFlag();} }>
+        <div className = "detail_main-choose" onClick = { () => { this.props.setDetailStyleFlag() } }>
+          <span className = "left">已选</span>
+          <span className = "center">请选择颜色，尺码</span>
+          <i className = "right"></i>
+        </div>
+
+        <div className = "detail_main-choose" onClick = { () => { this.props.changeMoreAdressFlag();} }>
           <span className = "left">送至</span>
           <span className = "center">{ this.props.setAdress }</span>
           <i className = "right"></i>
@@ -48,6 +55,7 @@ class Com extends React.Component {
         { this.props.moreAdressFlag ? <ChooseAdress props = { this.props } /> : null }
         { this.props.otherAdressFlag ? <OtherAdress props = { this.props } /> : null }
         { this.props.detailCouponFlag ? <DetailCoupon props = { this.props } /> : null }
+        { this.props.detailStyleFlag ? <DetailStyle props = { this.props } /> : null }
         <Route path = {this.props.match.url + "/:name"} exact component = { OtherAdress2 }/>
       </div>
     )
