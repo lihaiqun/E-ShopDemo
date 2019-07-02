@@ -62,6 +62,7 @@
     @include flex();
     @include rect(100%, auto);
     background: #f8f8f8;
+    overflow: auto;
     .detail_main-banner {
       .banner {
         @include rect(100%, 3.49rem);
@@ -110,12 +111,69 @@
       .center {
         @include flex();
         color: #333;
+        span {
+          background: url("./../../images/detail/checked.png") no-repeat left;
+          background-size: .12rem .12rem;
+          padding-left: .17rem;
+          margin-right: .14rem;
+          font-size: .14rem;
+          
+        }
       }
       .right {
         @include rect(.1rem, .18rem);
         margin-right: .14rem;
         background: url('./../../images/detail/rightback.png') no-repeat center;
       }
+    }
+
+    .detail_main-Album {
+      @include rect(100%, auto);
+      .satisfied {
+        @include rect(100%, .44rem);
+        @include flexbox();
+        @include align-items();
+        background: #fff;
+        font-size: .15rem;
+        border-bottom: 1px solid #f8f8f8;
+        .left {
+          color: #666;
+          margin: 0 .17rem 0 .08rem;
+        }
+        .center {
+          @include flex();
+          color: #333;
+          text-align: right;
+          padding-right: .07rem;
+          span {
+            background: url("./../../images/detail/checked.png") no-repeat left;
+            background-size: .12rem .12rem;
+            padding-left: .17rem;
+            margin-right: .14rem;
+            font-size: .14rem;
+            
+          }
+        }
+        .right {
+          @include rect(.1rem, .18rem);
+          margin-right: .14rem;
+          background: url('./../../images/detail/rightback.png') no-repeat center;
+        }
+      }
+      .evaluate {
+        @include flexbox();
+        @include rect(100%, .2rem);
+        li {
+          @include border-radius(.1rem);
+          background: #FEDFE5;
+          padding: 0 .08rem;
+          margin-right: .06rem;
+          text-align: center;
+          font: .1rem/.2rem "";
+          color: #333;
+          border: none;
+        }
+      } 
     }
 
     .detail_main-coupon {
@@ -259,7 +317,7 @@
             .icon {
               background: url( './../../images/detail/checked.png') no-repeat center;
             }
-        }
+          }
         }
       }
 
@@ -496,6 +554,9 @@
               font-weight: 400;
               color: #999;
               margin-top: .14rem;
+              span {
+                margin-right: 5px;
+              }
               
             }
           }
@@ -532,6 +593,9 @@
           }
           .am-stepper.showNumber {
             @include rect(.76rem, .22rem);
+            * {
+              touch-action: pan-y;
+            }
             .am-stepper-handler-up,.am-stepper-handler-down {
               @include rect(.22rem, .22rem);
               font: .16rem/.24rem "";
@@ -566,6 +630,66 @@
           }
         }
       }
+    }
+  }
+
+  .detail_main-moreServer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 200;
+    background: rgba(0,0,0,.5);
+    .other {
+      @include rect(100%, 100%);
+    }
+    .server {
+      @include rect(100%, 4.8rem);
+      background: #fff;
+      position: absolute;
+      bottom:0;
+      border-radius: .08rem .08rem 0 0;
+      @include flexbox();
+      @include flex-direction(column);
+      overflow: auto;
+      padding-left: .08rem;
+      .top {
+        @include rect(100%, .38rem);
+        text-align: center;
+        font: .16rem/.38rem "";
+        color: #333;
+        position: relative;
+        border-bottom: #eee;
+        .cancel {
+          position: absolute;
+          right: .1rem;
+          top: .13rem;
+          @include rect(.12rem, .12rem);
+          background: url( './../../images/detail/cancel.png') no-repeat center;
+        }
+      }
+      .main {
+        margin-top: .06rem;
+        ul {
+          li {
+            @include rect(100%, auto);
+            background: url('./../../images/detail/checked.png') no-repeat left .03rem;
+            background-size: .12rem .12rem;
+            padding: 0 .19rem 0 .26rem;
+            margin-top: .13rem;
+            h5 {
+              font: .16rem/.22rem "";
+              color: #333;
+            }
+            p {
+              font: .13rem/.18rem "";
+              color: #666;
+            }
+          }
+        }
+      }
+      
     }
   }
 

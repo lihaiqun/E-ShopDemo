@@ -19,7 +19,10 @@ export default class Com extends React.Component {
   }
   render () {
     console.log(this)
-
+    const { detailStyleProps: {
+      detailStyleColor,
+      detailStyleSize
+    } } = this.props
   return(
     <QueueAnim
     animConfig={[
@@ -28,10 +31,10 @@ export default class Com extends React.Component {
     ]}
     >
       <div className = "detail_main-detailstyle" key = "detailStyle">
-      <div className = "other" onClick = { () => { this.props.props.setDetailStyleFlag() } }></div>
+      <div className = "other" onClick = { () => { this.props.detailStyleProps.changeDetailStyleFlag() } }></div>
         <div className = "detailstyle">
           <div className = "top">
-            <i className = "cancel" onClick = { () => { this.props.props.setDetailStyleFlag() } }></i>
+            <i className = "cancel" onClick = { () => { this.props.detailStyleProps.changeDetailStyleFlag() } }></i>
           </div>
           <div className = "main">
             <div className = "main_top">
@@ -40,25 +43,99 @@ export default class Com extends React.Component {
               <div className="img">图片快来了呦</div>
               <div className = "main_top-Specifications">
                 <h4>￥<span>159</span>.00</h4>
-                <h5>请选择颜色和尺码</h5>
+                {
+                  detailStyleColor || detailStyleSize ? 
+                  <h5>已选：<span>{detailStyleColor}</span><span>{detailStyleSize}</span></h5>
+                  : <h5>请选择颜色和尺码</h5>
+                }
               </div>
             </div>
             <div className = "main_center">
               <div className = "main_center-style">
                 <p>颜色</p>
-                <ul>
-                  <li className = "active">念香粉</li>
-                  <li>黑色</li>
+                <ul ref = "color">
+                  <li onClick = { (e) => { 
+                    for(let i = 0; i < this.refs.color.children.length; i++) {
+                      this.refs.color.children[i].className = ""
+                    }
+                    e.target.className = "active";
+                    this.props.detailStyleProps.setDetailStyleColor(e.target.innerHTML)
+                  }}>
+                    念香粉
+                  </li>
+                  <li onClick = { (e) => { 
+                    for(let i = 0; i < this.refs.color.children.length; i++) {
+                      this.refs.color.children[i].className = ""
+                    }
+                    e.target.className = "active";
+                    this.props.detailStyleProps.setDetailStyleColor(e.target.innerHTML)
+                  }}>
+                    白色
+                  </li>
+                  <li onClick = { (e) => { 
+                    for(let i = 0; i < this.refs.color.children.length; i++) {
+                      this.refs.color.children[i].className = ""
+                    }
+                    e.target.className = "active";
+                    this.props.detailStyleProps.setDetailStyleColor(e.target.innerHTML)
+                  }}>
+                    黑色
+                  </li>
                 </ul>
               </div>
               <div className = "main_center-style">
                 <p>尺码</p>
-                <ul>
-                  <li>155/72A/XS</li>
-                  <li>160/80A/S</li>
-                  <li>165/84A/M</li>
-                  <li>170/88A/L</li>
-                  <li>175/92A/XL</li>
+                <ul ref = "size">
+                  <li onClick = { (e) => { 
+                    for(let i = 0; i < this.refs.size.children.length; i++) {
+                      this.refs.size.children[i].className = ""
+                    }
+                    e.target.className = "active";
+                    this.props.detailStyleProps.setDetailStyleSize(e.target.innerHTML)
+                  }}
+                  >
+                    155/72A/XS
+                  </li>
+                  <li onClick = { (e) => { 
+                    for(let i = 0; i < this.refs.size.children.length; i++) {
+                      this.refs.size.children[i].className = ""
+                    }
+                    e.target.className = "active";
+                    this.props.detailStyleProps.setDetailStyleSize(e.target.innerHTML)
+                  }}
+                  >
+                    160/80A/S
+                  </li>
+                  <li onClick = { (e) => { 
+                    for(let i = 0; i < this.refs.size.children.length; i++) {
+                      this.refs.size.children[i].className = ""
+                    }
+                    e.target.className = "active";
+                    this.props.detailStyleProps.setDetailStyleSize(e.target.innerHTML)
+                  }}
+                  >
+                    170/88A/L
+                  </li>
+                  <li onClick = { (e) => { 
+                    for(let i = 0; i < this.refs.size.children.length; i++) {
+                      this.refs.size.children[i].className = ""
+                    }
+                    e.target.className = "active";
+                    this.props.detailStyleProps.setDetailStyleSize(e.target.innerHTML)
+                  }}
+                  >
+                    165/84A/M
+                  </li>
+                  <li onClick = { (e) => { 
+                    for(let i = 0; i < this.refs.size.children.length; i++) {
+                      this.refs.size.children[i].className = ""
+                    }
+                    e.target.className = "active";
+                    this.props.detailStyleProps.setDetailStyleSize(e.target.innerHTML)
+                  }}
+                  >
+                    175/92A/XL
+                  </li>
                 </ul>
               </div>
                 <Stepper
@@ -69,8 +146,8 @@ export default class Com extends React.Component {
               />
             </div>
             <div className = "main_bottom">
-              <button className = "main_bottom-addCart">加入购物车</button>
-              <button className = "main_bottom-buyNow">立即购买</button>
+              <button className = "main_bottom-addCart"  onClick = { () => { this.props.detailStyleProps.changeDetailStyleFlag() } }>加入购物车</button>
+              <button className = "main_bottom-buyNow"  onClick = { () => { this.props.detailStyleProps.changeDetailStyleFlag() } }>立即购买</button>
             </div>
           </div>
         </div>

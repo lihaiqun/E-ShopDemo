@@ -7,9 +7,12 @@ const mapStateToPorps = (state) => {
     otherAdressFlag: state.detail.detailShop.otherAdressFlag,
     detailCouponFlag: state.detail.detailShop.detailCouponFlag,
     detailStyleFlag: state.detail.detailShop.detailStyleFlag,
+    moreServerFlag: state.detail.detailShop.moreServerFlag,
     setAdress: state.detail.detailShop.setAdress,
     receviedArr: state.detail.detailShop.receviedArr,
-    noReceviedArr: state.detail.detailShop.noReceviedArr
+    noReceviedArr: state.detail.detailShop.noReceviedArr,
+    detailStyleColor: state.detail.detailShop.detailStyleColor,
+    detailStyleSize: state.detail.detailShop.detailStyleSize,
 })}
 
 const mapDispatchToProps = (dispatch) => ({
@@ -19,10 +22,10 @@ const mapDispatchToProps = (dispatch) => ({
       data: !this.moreAdressFlag
     })
   },
-  changeSetAdress (str) {
+  changeSetAdress (data) {
     dispatch({
       type : "changeSetAdress",
-      data: str
+      data
     })
   },
   setOtherAdress () {
@@ -31,13 +34,19 @@ const mapDispatchToProps = (dispatch) => ({
       data: !this.otherAdressFlag
     })
   },
+  changeMoreServerFlag () {
+    dispatch({
+      type : "setMoreServerFlag",
+      data: !this.moreServerFlag
+    })
+  },
   setDetailCouponFlag () {
     dispatch({
       type : "setDetailCouponFlag",
       data: !this.detailCouponFlag
     })
   },
-  setDetailStyleFlag () {
+  changeDetailStyleFlag () {
     dispatch({
       type : "setDetailStyleFlag",
       data: !this.detailStyleFlag
@@ -52,6 +61,18 @@ const mapDispatchToProps = (dispatch) => ({
   setNoReceviedArr (data) {
     dispatch({
       type : "setNoReceviedArr",
+      data
+    })
+  },
+  setDetailStyleColor (data) {
+    dispatch({
+      type : "setDetailStyleColor",
+      data
+    })
+  },
+  setDetailStyleSize (data) {
+    dispatch({
+      type : "setDetailStyleSize",
       data
     })
   },
